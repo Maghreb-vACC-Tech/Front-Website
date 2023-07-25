@@ -2,7 +2,7 @@
 
 Welcome to the Maghreb Vacc website repository! This website is built with React and aims to provide information and resources related to the Maghreb Vacc on VATSIM, including events, staff policies, FAQs, and a contact form.
 
-# **Table of Contents : **
+# Table of Contents : 
 
  - Features
  - Installation
