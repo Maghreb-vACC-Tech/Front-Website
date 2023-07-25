@@ -1,0 +1,12 @@
+.Question{
+    width: 80vw;
+    background-color: rgb(25,26,29);
+    text-align: center;
+}
+
+.Question > div > *{
+    float: left;
+}
+.Question > div > h1{
+    font-size: 3vh;
+}
