@@ -18,7 +18,7 @@ Welcome to the Maghreb Vacc website repository! This website is built with React
  - FAQ: Find answers to frequently asked questions about Maghreb Vacc and VATSIM.
  - Contact Us: Get in touch with the Maghreb Vacc team using the contact form.
     
-# **Installation : **
+# Installation : 
   To run the Maghreb Vacc website locally, follow these steps:
 
  - Clone this repository to your local machine using git clone https://github.com/Maghreb-vACC-Tech/Front-Website.git .
