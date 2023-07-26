@@ -2,6 +2,7 @@ import './App.css';
 
 
 import React , { useState, useEffect } from "react"
+// import "bootstrap/dist/css/bootstrap.css"
 
 // Logo
 import SmallLogo from "./Ressources/Images/Logo/logo.svg"
@@ -113,8 +114,39 @@ function App() {
       </div>
 
       <div className='FAQ' id='FAQ'>
-        <div><h1>Frequently Asked Questions</h1></div>
-        <Question></Question>
+        <div className='FAQ-Title'><h1>Frequently Asked Questions</h1></div>
+        
+          <Question
+          Question = "How to join?"
+          Answer = "This is the first item's accordion body. It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the .accordion-body, though the transition does limit overflow."
+          index = "false"
+          number = "Q1"
+          sign = "1"
+          />
+
+          <Question
+          Question = "How to join?"
+          Answer = "This is the first item's accordion body. It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the .accordion-body, though the transition does limit overflow."
+          index = "false"
+          number = "Q2"
+          sign = "2"
+          />
+
+          <Question
+          Question = "How to join?"
+          Answer = "This is the first item's accordion body. It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the .accordion-body, though the transition does limit overflow."
+          index = "false"
+          number = "Q3"
+          sign = "3"
+          />
+          
+          <Question
+          Question = "How to join?"
+          Answer = "This is the first item's accordion body. It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the .accordion-body, though the transition does limit overflow."
+          index = "false"
+          number = "Q4"
+          sign = "4"
+          />
       </div>
     </div>
   );

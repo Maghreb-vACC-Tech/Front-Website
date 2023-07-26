@@ -145,16 +145,29 @@
 
 /* FAQ */
 .FAQ{
+  
   width: 100vw;
-  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: rgba(18,19,22);
+  padding-bottom: 10vh;
 }
-.FAQ > div{
+.FAQ-Title{
   float: left;
   text-align: center;
   width: 100vw;
+  height: 10vh;
   margin: auto;
 }
 .FAQ div h1{
   color: white;
+}
+
+.Question{
+  width: 100vw;
+  height: auto;
+  padding-top: 5vh;
+  float: left;
+  translate: 10vw;
 }

@@ -1,12 +1,55 @@
-.Question{
-    width: 80vw;
-    background-color: rgb(25,26,29);
-    text-align: center;
-}
 
-.Question > div > *{
+.Question-Container {
+    float: left;
+    width: 80vw;
+    height: 7vh;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    padding-left: 2vw;
+    background-color: rgb(25,26,29);
+    margin: auto;
+    border-radius: 3vw;
+    color: white;
+}
+.Question-Container{
+    cursor: pointer;
+}
+.Question-Container > div {
     float: left;
 }
-.Question > div > h1{
-    font-size: 3vh;
+.Question-Title{
+    width: 90%;
 }
+.Question-sign{
+    text-align: center;
+    width: 10%;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+}
+
+.Question-Answer{
+    
+  width: 80vw;
+  float: left;
+  /* height: auto; */
+  
+  max-height: 20vh;
+  min-height: 10vh;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.Question-Answer.hidden {
+    transition: all 0.3s ease;
+    height: 0;
+    min-height: 0vh;
+    max-height: 0vh;
+    opacity: 0;
+  }
+
+.Question-Answer p{
+    padding-left: 2vw;
+    padding-right: 2vw;
+    color: white;
+}
+
