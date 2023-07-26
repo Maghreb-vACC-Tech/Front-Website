@@ -9,10 +9,10 @@ function Navbar(props){
             </div>
             <div className="Links">
                 <div>
-                    <a href="#">Home</a>
+                    <a href="#Home">Home</a>
                 </div>
                 <div>
-                    <a href="#">Events</a>
+                    <a href="#Events">Events</a>
                 </div>
                 <div>
                     <a href="#">Pilots</a>

@@ -1,14 +1,14 @@
 
 .Question-Container {
     float: left;
-    width: 80vw;
+    width: 70vw;
     height: 7vh;
     padding-top: 2vh;
     padding-bottom: 2vh;
     padding-left: 2vw;
     background-color: rgb(25,26,29);
     margin: auto;
-    border-radius: 3vw;
+    border-radius: 1.5vw;
     color: white;
 }
 .Question-Container{
@@ -29,7 +29,7 @@
 
 .Question-Answer{
     
-  width: 80vw;
+  width: 70vw;
   float: left;
   /* height: auto; */
   

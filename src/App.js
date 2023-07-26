@@ -29,10 +29,10 @@ function App() {
       setScrollPositionY(scrollPosition);
 
       
-
+    //Scroll Animation For NavBar 
     if (scrollPosition > 100){
       document.querySelector(".Navbar").style.backgroundColor = "rgba(25 ,26 ,29 , 0.95)"
-      document.querySelector(".Navbar").style.boxShadow = "0.1px 0.1px 2vw rgba(0, 0, 0)"
+      document.querySelector(".Navbar").style.boxShadow = "0.1px 0.1px 1vw #0F1011"
       document.querySelector(".GetStarted").style.backgroundColor = "rgb(0,155,60)"
       document.querySelector(".Logo-Image").style.width = "4vw"
       document.querySelector(".Navbar").style.backdropFilter  = "contrast(90%) saturate(230%) blur(20px) brightness(110%)"
@@ -45,8 +45,24 @@ function App() {
       document.querySelector(".Logo-Image").style.width = "7vw"
       document.querySelector(".Navbar").style.backdropFilter  = "contrast(100%) saturate(100%) blur(0px) brightness(100%)"
       SetLogo(BigLogo)
+    } 
+    
+    //Scroll Animation For About 
+    if (scrollPosition > 500){
+      document.querySelector(".AboutText").style.visibility="visible"
+      document.querySelector(".AboutText").classList.add("animate__fadeInLeft")
     }
+
+    //Scroll Animation For About 
+    if (scrollPosition > 800){
+      document.querySelector(".AboutText").style.visibility="visible"
+      document.querySelector(".AboutText").classList.add("animate__fadeInLeft")
+    }
+  
     });
+
+
+ 
 
   }, []);
 
@@ -54,7 +70,7 @@ function App() {
   return (
     <div className="App">
 
-      <div className='Home'>
+      <div className='Home'id='Home'>
         <div className='HomeOverlay'>
 
           <Navbar Logo={Logo}></Navbar>
@@ -67,7 +83,7 @@ function App() {
               <p>Fly and control over the Atlas mountains</p>
             </div>
           </div>
-          <div className='ScrollDown'>
+          <div className='ScrollDown animate__fadeInUp'>
             <a href='#About'>Scroll down</a><i class="fa-solid fa-chevron-down"></i>
           </div>
 
@@ -93,21 +109,21 @@ function App() {
       </div>
 
       <div className='Events' id='Events'>
-        <div>
+        <div className=''>
           <h1>Upcoming Events</h1>
         </div>
         <div>
-          <div>
+          <div className='event1 animate__fadeInLeft'>
             <img src={event1}></img>
           </div>
-          <div>
+          <div className='event2 animate__fadeIn'>
             <img src={event2}></img>
           </div>
-          <div>
+          <div className='event3 animate__fadeInRight'>
             <img src={event3}></img>
           </div>
         </div>
-        <div>
+        <div className='animate__fadeInUp'>
           <a href='#'>Check More</a>
         </div>
         

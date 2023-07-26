@@ -45,7 +45,7 @@
     text-align: center;
     margin: auto;
     translate: 0 80vh;
-
+    animation-duration: 1s;
   }
 
   .ScrollDown a{
@@ -75,6 +75,10 @@
     float: left;
     margin-top: 20vh;
     height: 50vh;
+  }
+  .AboutText{
+    visibility: hidden;
+    animation-duration: 0.5s;
   }
   .AboutText h1{
     font-size: 5vh;
@@ -106,6 +110,10 @@
     float: left;
     width: 100%;
     margin-top: 5vh;
+    animation-duration: 1s;
+  }
+  .Events > div > div{
+    animation-duration: 1s;
   }
   .Events > div > h1{
     color: white;
@@ -158,7 +166,9 @@
   text-align: center;
   width: 100vw;
   height: 10vh;
-  margin: auto;
+  margin: auto;    
+  padding-bottom: 5vh;
+
 }
 .FAQ div h1{
   color: white;
@@ -167,7 +177,7 @@
 .Question{
   width: 100vw;
   height: auto;
-  padding-top: 5vh;
+  padding-top: 2vh;
   float: left;
-  translate: 10vw;
+  translate: 15vw;
 }
