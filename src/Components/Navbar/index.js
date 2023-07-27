@@ -15,7 +15,10 @@ function Navbar(props){
                     <a href="#Events">Events</a>
                 </div>
                 <div>
-                    <a href="#">Pilots</a>
+                    <a href="#FAQ">FAQ</a>
+                </div>
+                <div>
+                    <a href="#Staff">Our Team</a>
                 </div>
                 <div>
                     <a href="#">Contact</a>

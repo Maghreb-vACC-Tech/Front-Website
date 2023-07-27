@@ -14,7 +14,7 @@
     z-index: 1;
 }
 .Logo{
-    width: 50%;
+    width: 40%;
 }
 .Logo img{
     width: 7vw;
@@ -27,7 +27,7 @@
 }
 
 .Links {
-    width: 30%;
+    width: 40%;
 }
 
 .Links > div {

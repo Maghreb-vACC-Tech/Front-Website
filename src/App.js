@@ -12,6 +12,9 @@ import BigLogo from "./Ressources/Images/Logo/logo-big.svg"
 import event1 from "./Ressources/Images/Events/1.jpg"
 import event2 from "./Ressources/Images/Events/2.jpg"
 import event3 from "./Ressources/Images/Events/3.jpg"
+
+// Staff
+import RedaStaffPic from "./Ressources/Images/Staff/reda.png"
 // Components
 import Navbar from './Components/Navbar';
 import Question from './Components/FAQ';
@@ -73,12 +76,7 @@ function App() {
 
   }, []);
 
-  // Staff Select Effect
-  useEffect(() => {
-    function StaffSelectonClick(){
-      
-    }
-  }, []);
+
 
   return (
     <div className="App">
@@ -187,59 +185,119 @@ function App() {
           />
       </div>
 
-      <div className='Staff'>
+      <div className='Staff' id="Staff">
 
         <div className='Staff-Title'><h1>Our Team</h1></div>
 
         <div className='Selected-Staff'>
             <div className='Selected-Staff-Container'>
               <div className='Selected-Staff-Container-1'>
-                <div className='Selected-Staff-Container-PDP'></div>
-                <div className='Selected-Staff-Container-TXT'><h1>Réda F.</h1><h2>ACCMA1</h2><p>vACC Director</p></div>
+                <div className='Selected-Staff-Container-PDP'><img src={RedaStaffPic}></img></div>
+                <div className='Selected-Staff-Container-TXT'><h1>Réda F.</h1><h2>ACCMA1</h2><p>1171306</p></div>
               </div>
               
               <div className='Selected-Staff-Container-2'>
-                <div>
+                <div className='Selected-Staff-Container-2-description'>
+                  <h1>vACC Director : </h1>
                   <p>Leader of the team that runs the vACC and maintains the smooth operation of the Virtual airspace. </p>
                 </div>
-                <div>
-                  <a href='#'><i class="fa-regular fa-envelope"></i></a> <p>Mail</p>
+                <div className='Selected-Staff-Container-2-link'>
+                  <a href='#'><i class="fa-regular fa-envelope"></i><span>Mail</span></a> 
                 </div>
               </div>
             </div>
             
         </div>
         <div className='Displayed-Staff'>
-          <DisplayedStaff
-            function="vACC Deputy Director"
-            name="Aymen S."
-            id="Aymen"
-            // state="selected"
+        <DisplayedStaff
+          function="vACC Director"
+          name="Réda F."
+          id="Reda"
+          onClick={() => {
+            document.querySelector(".Selected-Staff-Container-TXT h1").innerHTML = "Réda F."
+            document.querySelector(".Selected-Staff-Container-TXT h2").innerHTML = "ACCMA1"
+            document.querySelector(".Selected-Staff-Container-TXT p").innerHTML = "1171306"
+            document.querySelector(".Selected-Staff-Container-2-description h1").innerHTML = "vACC Director : "
+            document.querySelector(".Selected-Staff-Container-2-description p").innerHTML = "Leader of the team that runs the vACC and maintains the smooth operation of the Virtual airspace."
+            // document.querySelector("#Reda").style.border = "1px solid green"
+          }}
+          />
+        <DisplayedStaff
+          function="vACC Deputy Director"
+          name="Aymen S."
+          id="Aymen"
+          
+          onClick={() => {
+            document.querySelector(".Selected-Staff-Container-TXT h1").innerHTML = "Aymen S."
+            document.querySelector(".Selected-Staff-Container-TXT h2").innerHTML = "ACCMA2"
+            document.querySelector(".Selected-Staff-Container-TXT p").innerHTML = "1356990"
+            document.querySelector(".Selected-Staff-Container-2-description h1").innerHTML = "vACC Deputy Director : "
+            document.querySelector(".Selected-Staff-Container-2-description p").innerHTML = "Leader of the team that runs the vACC and maintains the smooth operation of the Virtual airspace."
+          }}
           />
           <DisplayedStaff
             function="ATC Training Director"
             name="Ali B."
             id="Ali"
+            
+            onClick={() => {
+              document.querySelector(".Selected-Staff-Container-TXT h1").innerHTML = "Ali B."
+              document.querySelector(".Selected-Staff-Container-TXT h2").innerHTML = "ACCMA3"
+              document.querySelector(".Selected-Staff-Container-TXT p").innerHTML = "1448616"
+              document.querySelector(".Selected-Staff-Container-2-description h1").innerHTML = "ATC Training Director : "
+              document.querySelector(".Selected-Staff-Container-2-description p").innerHTML = "Leader of the team that runs the vACC and maintains the smooth operation of the Virtual airspace."
+            }}
           />
           <DisplayedStaff
             function="Operations Director"
             name="Bobbie C."
             id="Bobbie"
-          />
-          <DisplayedStaff
-            function="ATC Training Deputy Director"
-            name="Emir D."
-            id="Emir"
+                        
+            onClick={() => {
+              document.querySelector(".Selected-Staff-Container-TXT h1").innerHTML = "Bobbie C."
+              document.querySelector(".Selected-Staff-Container-TXT h2").innerHTML = "ACCMA6"
+              document.querySelector(".Selected-Staff-Container-TXT p").innerHTML = "1444138"
+              document.querySelector(".Selected-Staff-Container-2-description h1").innerHTML = "Operations Director : "
+              document.querySelector(".Selected-Staff-Container-2-description p").innerHTML = "Leader of the team that runs the vACC and maintains the smooth operation of the Virtual airspace."
+            }}
           />
           <DisplayedStaff
             function="Tech Director"
             name="Ilyass B."
             id="Ilyass"
+
+            onClick={() => {
+              document.querySelector(".Selected-Staff-Container-TXT h1").innerHTML = "Ilyass B."
+              document.querySelector(".Selected-Staff-Container-TXT h2").innerHTML = "ACCMA8"
+              document.querySelector(".Selected-Staff-Container-TXT p").innerHTML = "1674212"
+              document.querySelector(".Selected-Staff-Container-2-description h1").innerHTML = "Tech Director : "
+              document.querySelector(".Selected-Staff-Container-2-description p").innerHTML = "Leader of the team that runs the vACC and maintains the smooth operation of the Virtual airspace."
+            }}
+          />
+          <DisplayedStaff
+            function="ATC Training Deputy Director"
+            name="Emir D."
+            id="Emir"     
+
+            onClick={() => {
+              document.querySelector(".Selected-Staff-Container-TXT h1").innerHTML = "Emir D."
+              document.querySelector(".Selected-Staff-Container-TXT h2").innerHTML = "ACCMA31"
+              document.querySelector(".Selected-Staff-Container-TXT p").innerHTML = "1516924"
+              document.querySelector(".Selected-Staff-Container-2-description h1").innerHTML = "ATC Training Deputy Director : "
+              document.querySelector(".Selected-Staff-Container-2-description p").innerHTML = "Leader of the team that runs the vACC and maintains the smooth operation of the Virtual airspace."
+            }}
           />
           <DisplayedStaff
             function="Local Membership Manager"
             name="Shaun M."
             id="Shaun"
+            onClick={() => {
+              document.querySelector(".Selected-Staff-Container-TXT h1").innerHTML = "Shaun M."
+              document.querySelector(".Selected-Staff-Container-TXT h2").innerHTML = "ACCMA41"
+              document.querySelector(".Selected-Staff-Container-TXT p").innerHTML = "1081094"
+              document.querySelector(".Selected-Staff-Container-2-description h1").innerHTML = "Local Membership Manager : "
+              document.querySelector(".Selected-Staff-Container-2-description p").innerHTML = "Leader of the team that runs the vACC and maintains the smooth operation of the Virtual airspace."
+            }}
           />
         </div>
       </div>
