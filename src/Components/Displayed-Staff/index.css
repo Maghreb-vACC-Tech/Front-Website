@@ -1,0 +1,41 @@
+.Displayed-Staff-Container{
+  background-color: rgb(25,26,29);
+  width: 20vw;
+  height: 15vh;
+  border-radius: 15px;
+  margin-bottom:7vh ;
+  margin-left:2vw ;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.Displayed-Staff-Container:hover{
+    background-color: rgb(41, 41, 43);
+    transition: all 0.3s ease;
+}
+.Displayed-Staff-Container-PDP{
+  border-radius: 100vw;
+  width:6vw;
+  height: 11vh;
+  background-color: aliceblue;
+  translate: 1vw 2vh;
+}
+.Displayed-Staff-Container-TXT{
+    width: 9vw;
+    height: 15vh;
+    padding-left: 2vw;
+}
+.Displayed-Staff-Container-TXT > h1{
+    color: white;
+    font-size: 1.7vw;
+    translate: 0 1vh;
+}
+.Displayed-Staff-Container-TXT > p{
+    color: white;
+    translate: 0 -1vh;
+    font-weight: 200;
+    font-size: 1vw;
+}
+.Displayed-Staff-Container > div{
+    float: left;
+}

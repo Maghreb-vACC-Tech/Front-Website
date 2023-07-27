@@ -201,12 +201,18 @@
 .Selected-Staff{
   float: left;
   width: 50vw;
-  height: 80vh;
+  height: 60vh;
+  
 }
-.Showed-Staff{
+.Displayed-Staff{
   float: left;
   width: 50vw;
-  height: 80vh;
+  height: 60vh;
+  translate: 0 10vh;
+  border-radius: 3vw;
+}
+.Displayed-Staff > div {
+  float: left;
 }
 .Selected-Staff-Container{
   background-color: rgb(25,26,29);
@@ -215,4 +221,63 @@
   height: 60vh;
   translate: 0 10vh;
   border-radius: 3vw;
+}
+.Selected-Staff-Container-1{
+  width: 40vw;
+  height: 30vh;
+
+}
+.Selected-Staff-Container-2{
+  width: 40vw;
+  height: 30vh;
+
+}
+.Selected-Staff-Container-1 > div {
+  float: left;
+}
+.Selected-Staff-Container-PDP{
+  background-color: aliceblue;
+  width: 15vw;
+  height: 15vw;
+  border-radius: 100vw;
+  margin: 1vw;
+}
+
+.Selected-Staff-Container-TXT{
+  width: 23vw;
+  height: 15vw;
+}
+.Selected-Staff-Container-TXT h1{
+  color: white;
+  font-size: 3vw;
+  padding-left: 2vw;
+}
+.Selected-Staff-Container-TXT h2{
+  color: green;
+  font-size: 1.2vw;
+  padding-left: 2vw;
+}
+.Selected-Staff-Container-TXT p{
+  color: white;
+  font-size: 1.2vw;
+  padding-left: 2vw;
+}
+
+
+.Selected-Staff-Container-2{
+  padding-top: 5vh;
+}
+.Selected-Staff-Container-2 > div{
+  width:35vw;
+  margin: auto;
+  font-size: 1.2vw;
+  color: white;
+}
+
+.Selected-Staff-Container-2 > div > a{
+  color: green;
+}
+
+.Selected-Staff-Container-2 > div > *{
+  float: left;
 }

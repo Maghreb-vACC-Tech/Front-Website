@@ -15,6 +15,7 @@ import event3 from "./Ressources/Images/Events/3.jpg"
 // Components
 import Navbar from './Components/Navbar';
 import Question from './Components/FAQ';
+import DisplayedStaff from './Components/Displayed-Staff';
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
   const [ScrollPositionY, setScrollPositionY] = useState(0);
   const [Logo, SetLogo] = useState(BigLogo);
 
+  // Scroll Effect
   useEffect(() => {
     window.addEventListener("scroll", () => {
       const scrollPosition = window.scrollY;
@@ -71,10 +73,17 @@ function App() {
 
   }, []);
 
+  // Staff Select Effect
+  useEffect(() => {
+    function StaffSelectonClick(){
+      
+    }
+  }, []);
 
   return (
     <div className="App">
 
+      {/* Home */}
       <div className='Home'id='Home'>
         <div className='HomeOverlay'>
 
@@ -95,6 +104,7 @@ function App() {
         </div>
       </div>
 
+      {/* About */}
       <div className='About' id='About'>
         <div className='AboutText'>
             <h1>About</h1>
@@ -113,6 +123,7 @@ function App() {
         </div>
       </div>
 
+      {/* Event */}
       <div className='Events' id='Events'>
         <div className=''>
           <h1>Upcoming Events</h1>
@@ -134,6 +145,7 @@ function App() {
         
       </div>
 
+      {/* FAQ */}
       <div className='FAQ' id='FAQ'>
         <div className='FAQ-Title'><h1>Frequently Asked Questions</h1></div>
         
@@ -181,11 +193,54 @@ function App() {
 
         <div className='Selected-Staff'>
             <div className='Selected-Staff-Container'>
-
+              <div className='Selected-Staff-Container-1'>
+                <div className='Selected-Staff-Container-PDP'></div>
+                <div className='Selected-Staff-Container-TXT'><h1>Réda F.</h1><h2>ACCMA1</h2><p>vACC Director</p></div>
+              </div>
+              
+              <div className='Selected-Staff-Container-2'>
+                <div>
+                  <p>Leader of the team that runs the vACC and maintains the smooth operation of the Virtual airspace. </p>
+                </div>
+                <div>
+                  <a href='#'><i class="fa-regular fa-envelope"></i></a> <p>Mail</p>
+                </div>
+              </div>
             </div>
-        </div>
-        <div className='Showed-Staff'>
             
+        </div>
+        <div className='Displayed-Staff'>
+          <DisplayedStaff
+            function="vACC Deputy Director"
+            name="Aymen S."
+            id="Aymen"
+            // state="selected"
+          />
+          <DisplayedStaff
+            function="ATC Training Director"
+            name="Ali B."
+            id="Ali"
+          />
+          <DisplayedStaff
+            function="Operations Director"
+            name="Bobbie C."
+            id="Bobbie"
+          />
+          <DisplayedStaff
+            function="ATC Training Deputy Director"
+            name="Emir D."
+            id="Emir"
+          />
+          <DisplayedStaff
+            function="Tech Director"
+            name="Ilyass B."
+            id="Ilyass"
+          />
+          <DisplayedStaff
+            function="Local Membership Manager"
+            name="Shaun M."
+            id="Shaun"
+          />
         </div>
       </div>
     </div>
