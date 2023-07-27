@@ -54,11 +54,16 @@ function App() {
     }
 
     //Scroll Animation For About 
+    //document.querySelectorAll(".event").style.visibility = 
     if (scrollPosition > 800){
       document.querySelector(".AboutText").style.visibility="visible"
       document.querySelector(".AboutText").classList.add("animate__fadeInLeft")
     }
-  
+    
+    // if (scrollPosition > 1200){
+    //   document.querySelectorAll(".event").style.visibility="visible"
+    // }
+
     });
 
 
@@ -113,13 +118,13 @@ function App() {
           <h1>Upcoming Events</h1>
         </div>
         <div>
-          <div className='event1 animate__fadeInLeft'>
+          <div className='event animate__fadeInLeft'>
             <img src={event1}></img>
           </div>
-          <div className='event2 animate__fadeIn'>
+          <div className='event animate__fadeIn'>
             <img src={event2}></img>
           </div>
-          <div className='event3 animate__fadeInRight'>
+          <div className='event animate__fadeInRight'>
             <img src={event3}></img>
           </div>
         </div>
@@ -134,7 +139,12 @@ function App() {
         
           <Question
           Question = "How to join?"
-          Answer = "This is the first item's accordion body. It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the .accordion-body, though the transition does limit overflow."
+          Answer = {
+            <div>
+              <p>adewqf</p>
+              <a href='#'>hello</a>
+            </div>
+          }
           index = "false"
           number = "Q1"
           sign = "1"
@@ -163,6 +173,20 @@ function App() {
           number = "Q4"
           sign = "4"
           />
+      </div>
+
+      <div className='Staff'>
+
+        <div className='Staff-Title'><h1>Our Team</h1></div>
+
+        <div className='Selected-Staff'>
+            <div className='Selected-Staff-Container'>
+
+            </div>
+        </div>
+        <div className='Showed-Staff'>
+            
+        </div>
       </div>
     </div>
   );

@@ -153,7 +153,6 @@
 
 /* FAQ */
 .FAQ{
-  
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -180,4 +179,40 @@
   padding-top: 2vh;
   float: left;
   translate: 15vw;
+}
+
+
+
+/* Staff */
+.Staff{
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(18,19,22);
+}
+.Staff-Title{
+  float: left;
+  text-align: center;
+  width: 100vw;
+  height: 10vh;
+  margin: auto;    
+  padding-bottom: 5vh;
+  color: white;
+}
+.Selected-Staff{
+  float: left;
+  width: 50vw;
+  height: 80vh;
+}
+.Showed-Staff{
+  float: left;
+  width: 50vw;
+  height: 80vh;
+}
+.Selected-Staff-Container{
+  background-color: rgb(25,26,29);
+  margin: auto;
+  width: 40vw;
+  height: 60vh;
+  translate: 0 10vh;
+  border-radius: 3vw;
 }
