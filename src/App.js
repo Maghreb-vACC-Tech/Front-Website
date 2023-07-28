@@ -258,7 +258,7 @@ function App() {
               document.querySelector(".Selected-Staff-Container-TXT h2").innerHTML = "ACCMA6"
               document.querySelector(".Selected-Staff-Container-TXT p").innerHTML = "1444138"
               document.querySelector(".Selected-Staff-Container-2-description h1").innerHTML = "Operations Director : "
-              document.querySelector(".Selected-Staff-Container-2-description p").innerHTML = "Leader of the team that runs the vACC and maintains the smooth operation of the Virtual airspace."
+              document.querySelector(".Selected-Staff-Container-2-description p").innerHTML = "As the Operations Director in the Maghreb vACC on VATSIM, my role involves overseeing the Operations team and developing new projects. I am also responsible for maintaining up-to-date documentation, creating new tools and keeping sector files up-to-date."
             }}
           />
           <DisplayedStaff

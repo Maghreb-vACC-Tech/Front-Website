@@ -237,16 +237,16 @@
 }
 .Selected-Staff-Container-PDP{
   background-color: aliceblue;
-  width: 15vw;
-  height: 15vw;
+  width: 12vw;
+  height: 12vw;
   border-radius: 100vw;
-  margin: 1vw;
+  margin: 2vw;
 }
 
 .Selected-Staff-Container-PDP img{
   background-color: aliceblue;
-  width: 15vw;
-  height: 15vw;
+  width: 12vw;
+  height: 12vw;
   border-radius: 100vw;
 }
 .Selected-Staff-Container-TXT{
@@ -276,7 +276,7 @@
 .Selected-Staff-Container-2 > div{
   width:35vw;
   margin: auto;
-  font-size: 1.2vw;
+  font-size: 1.1vw;
   color: white;
 }
 
