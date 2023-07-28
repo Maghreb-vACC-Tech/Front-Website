@@ -21,11 +21,49 @@ import Question from './Components/FAQ';
 import DisplayedStaff from './Components/Displayed-Staff';
 
 
+
+
+
 function App() {
 
+  /////////////////////////////// Params////////////////////////////////
 
-  const [ScrollPositionY, setScrollPositionY] = useState(0);
-  const [Logo, SetLogo] = useState(BigLogo);
+  // Staff
+  const StaffAnimationClass = "animate__fadeIn"
+  const StaffAnimationRemovalDuration = 500
+
+
+  // Join Code
+  
+  function JoinFormSliderBack(classes) {
+    document.querySelector(classes).style.display="none"
+    document.querySelector(".JoinForm-Question1").style.display="block"
+  }
+
+  function JoinFormSlider() {
+      document.querySelector(".JoinForm-Question1").style.display="block"
+      document.querySelector(".JoinForm-Question").style.display="none"
+  }
+
+
+  function JoinFormSliderTrue() {
+      document.querySelector(".JoinForm-Question-true").style.display="block"
+      document.querySelector(".JoinForm-Question1").style.display="none"
+  }
+
+
+  function JoinFormSliderFalse() {
+      document.querySelector(".JoinForm-Question-false").style.display="block"
+      document.querySelector(".JoinForm-Question1").style.display="none"
+  }
+
+
+
+    const [ScrollPositionY, setScrollPositionY] = useState(0);
+    const [Logo, SetLogo] = useState(BigLogo);
+
+
+
 
   // Scroll Effect
   useEffect(() => {
@@ -148,13 +186,9 @@ function App() {
         <div className='FAQ-Title'><h1>Frequently Asked Questions</h1></div>
         
           <Question
-          Question = "How to join?"
-          Answer = {
-            <div>
-              <p>adewqf</p>
-              <a href='#'>hello</a>
-            </div>
-          }
+          Question = "Who are we?"
+          
+          Answer = "MaghrebVACC is a volunteer-run organization that provides air traffic control services for virtual pilots in the Maghreb region of North Africa. It is part of the VATSIM network and is staffed by a team of passionate air traffic controllers who are committed to providing a realistic and enjoyable virtual flying experience. The organization operates using the same procedures and guidelines as real-world air traffic control, making it a valuable training ground for aspiring air traffic controllers. Through its services, MaghrebVACC helps to promote aviation and air traffic control knowledge among virtual pilots and enthusiasts."
           index = "false"
           number = "Q1"
           sign = "1"
@@ -162,7 +196,27 @@ function App() {
 
           <Question
           Question = "How to join?"
-          Answer = "This is the first item's accordion body. It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the .accordion-body, though the transition does limit overflow."
+          Answer = {
+            <div className="JoinForm" id="JoinForm" >
+              {/* <div  className="JoinForm-Question animate__fadeInLeft">
+                  <p onClick={()=>{JoinFormSlider()}}>Next</p>
+                  
+              </div> */}
+              <div id="JoinForm-noscroll" className="JoinForm-Question1 animate__fadeInRight">
+                  <p>Are Part of the Europe Middle East and Africa (EMEA) region?</p>
+                  <a href="#JoinForm-noscroll" onClick={()=>{JoinFormSliderTrue()}}>Yes</a>
+                  <a href="#JoinForm-noscroll" onClick={()=>{JoinFormSliderFalse()}}>No</a>
+              </div>
+              <div className="JoinForm-Question-true animate__fadeInRight">
+                  <a href="https://helpdesk.vatsim.me/open.php" target='blank'>Open Ticket</a>
+                  <p onClick={()=>{JoinFormSliderBack(".JoinForm-Question-true")}}>Back</p>
+              </div>
+              <div className="JoinForm-Question-false animate__fadeInRight">
+                  <a href="https://my.vatsim.net/user/region" target='blank'>Change Region</a>
+                  <p onClick={()=>{JoinFormSliderBack(".JoinForm-Question-false")}}>Back</p>
+              </div>
+            </div>
+          }
           index = "false"
           number = "Q2"
           sign = "2"
@@ -190,9 +244,11 @@ function App() {
         <div className='Staff-Title'><h1>Our Team</h1></div>
 
         <div className='Selected-Staff'>
-            <div className='Selected-Staff-Container'>
+            <div className='Selected-Staff-Container animate__fadeInLeft'>
               <div className='Selected-Staff-Container-1'>
-                <div className='Selected-Staff-Container-PDP'><img src={RedaStaffPic}></img></div>
+                <div className='Selected-Staff-Container-PDP'>
+                  {/* <img src={RedaStaffPic}></img> */}
+                </div>
                 <div className='Selected-Staff-Container-TXT'><h1>Réda F.</h1><h2>ACCMA1</h2><p>1171306</p></div>
               </div>
               
@@ -209,17 +265,26 @@ function App() {
             
         </div>
         <div className='Displayed-Staff'>
+          
         <DisplayedStaff
           function="vACC Director"
           name="Réda F."
           id="Reda"
           onClick={() => {
+            setTimeout(()=>{
+              document.querySelector(".Selected-Staff-Container").classList.remove(StaffAnimationClass)
+            },StaffAnimationRemovalDuration)
+
             document.querySelector(".Selected-Staff-Container-TXT h1").innerHTML = "Réda F."
             document.querySelector(".Selected-Staff-Container-TXT h2").innerHTML = "ACCMA1"
             document.querySelector(".Selected-Staff-Container-TXT p").innerHTML = "1171306"
             document.querySelector(".Selected-Staff-Container-2-description h1").innerHTML = "vACC Director : "
-            document.querySelector(".Selected-Staff-Container-2-description p").innerHTML = "Leader of the team that runs the vACC and maintains the smooth operation of the Virtual airspace."
-            // document.querySelector("#Reda").style.border = "1px solid green"
+            document.querySelector(".Selected-Staff-Container-2-description p").innerHTML = "Leader of the MaghrebVacc, responsible for overseeing the overall operation of the Virtual Area Control Center."
+            
+                       
+            document.querySelector(".Selected-Staff-Container").classList.add(StaffAnimationClass)
+
+            
           }}
           />
         <DisplayedStaff
@@ -228,11 +293,20 @@ function App() {
           id="Aymen"
           
           onClick={() => {
+            setTimeout(()=>{
+              document.querySelector(".Selected-Staff-Container").classList.remove(StaffAnimationClass)
+            },StaffAnimationRemovalDuration)
+
             document.querySelector(".Selected-Staff-Container-TXT h1").innerHTML = "Aymen S."
             document.querySelector(".Selected-Staff-Container-TXT h2").innerHTML = "ACCMA2"
             document.querySelector(".Selected-Staff-Container-TXT p").innerHTML = "1356990"
             document.querySelector(".Selected-Staff-Container-2-description h1").innerHTML = "vACC Deputy Director : "
-            document.querySelector(".Selected-Staff-Container-2-description p").innerHTML = "Leader of the team that runs the vACC and maintains the smooth operation of the Virtual airspace."
+            document.querySelector(".Selected-Staff-Container-2-description p").innerHTML = "Deputy Director of the MaghrebVacc, assisting the Director in managing the various departments and ensuring the smooth operation of the center"
+            
+           
+            document.querySelector(".Selected-Staff-Container").classList.add(StaffAnimationClass)
+
+            
           }}
           />
           <DisplayedStaff
@@ -241,11 +315,20 @@ function App() {
             id="Ali"
             
             onClick={() => {
+
+              setTimeout(()=>{
+                document.querySelector(".Selected-Staff-Container").classList.remove(StaffAnimationClass)
+              },StaffAnimationRemovalDuration)
+
               document.querySelector(".Selected-Staff-Container-TXT h1").innerHTML = "Ali B."
               document.querySelector(".Selected-Staff-Container-TXT h2").innerHTML = "ACCMA3"
               document.querySelector(".Selected-Staff-Container-TXT p").innerHTML = "1448616"
               document.querySelector(".Selected-Staff-Container-2-description h1").innerHTML = "ATC Training Director : "
-              document.querySelector(".Selected-Staff-Container-2-description p").innerHTML = "Leader of the team that runs the vACC and maintains the smooth operation of the Virtual airspace."
+              document.querySelector(".Selected-Staff-Container-2-description p").innerHTML = "Training Director of the MaghrebVacc, responsible for the training and development of air traffic controllers within MaghrebVACC."
+                         
+              document.querySelector(".Selected-Staff-Container").classList.add(StaffAnimationClass)
+
+            
             }}
           />
           <DisplayedStaff
@@ -258,7 +341,14 @@ function App() {
               document.querySelector(".Selected-Staff-Container-TXT h2").innerHTML = "ACCMA6"
               document.querySelector(".Selected-Staff-Container-TXT p").innerHTML = "1444138"
               document.querySelector(".Selected-Staff-Container-2-description h1").innerHTML = "Operations Director : "
-              document.querySelector(".Selected-Staff-Container-2-description p").innerHTML = "Leader of the team that runs the vACC and maintains the smooth operation of the Virtual airspace."
+              document.querySelector(".Selected-Staff-Container-2-description p").innerHTML = "Operations Director of the MaghrebVacc, overseeing the day-to-day operations of the center and ensuring the efficient management of resources."
+                         
+              document.querySelector(".Selected-Staff-Container").classList.add(StaffAnimationClass)
+
+              setTimeout(()=>{
+                document.querySelector(".Selected-Staff-Container").classList.remove(StaffAnimationClass)
+              },StaffAnimationRemovalDuration)
+            
             }}
           />
           <DisplayedStaff
@@ -267,11 +357,20 @@ function App() {
             id="Ilyass"
 
             onClick={() => {
+
+              setTimeout(()=>{
+                document.querySelector(".Selected-Staff-Container").classList.remove(StaffAnimationClass)
+              },StaffAnimationRemovalDuration)
+
               document.querySelector(".Selected-Staff-Container-TXT h1").innerHTML = "Ilyass B."
               document.querySelector(".Selected-Staff-Container-TXT h2").innerHTML = "ACCMA8"
               document.querySelector(".Selected-Staff-Container-TXT p").innerHTML = "1674212"
               document.querySelector(".Selected-Staff-Container-2-description h1").innerHTML = "Tech Director : "
-              document.querySelector(".Selected-Staff-Container-2-description p").innerHTML = "Leader of the team that runs the vACC and maintains the smooth operation of the Virtual airspace."
+              document.querySelector(".Selected-Staff-Container-2-description p").innerHTML = "Tech Director of the MaghrebVacc, responsible for the technical infrastructure and systems used by MaghrebVACC."
+                         
+              document.querySelector(".Selected-Staff-Container").classList.add(StaffAnimationClass)
+
+            
             }}
           />
           <DisplayedStaff
@@ -284,7 +383,14 @@ function App() {
               document.querySelector(".Selected-Staff-Container-TXT h2").innerHTML = "ACCMA31"
               document.querySelector(".Selected-Staff-Container-TXT p").innerHTML = "1516924"
               document.querySelector(".Selected-Staff-Container-2-description h1").innerHTML = "ATC Training Deputy Director : "
-              document.querySelector(".Selected-Staff-Container-2-description p").innerHTML = "Leader of the team that runs the vACC and maintains the smooth operation of the Virtual airspace."
+              document.querySelector(".Selected-Staff-Container-2-description p").innerHTML = "Tech Director of the MaghrebVacc, assisting the Training Director in the training and development of air traffic controllers."
+                         
+              document.querySelector(".Selected-Staff-Container").classList.add(StaffAnimationClass)
+
+              setTimeout(()=>{
+                document.querySelector(".Selected-Staff-Container").classList.remove(StaffAnimationClass)
+              },StaffAnimationRemovalDuration)
+            
             }}
           />
           <DisplayedStaff
@@ -292,13 +398,61 @@ function App() {
             name="Shaun M."
             id="Shaun"
             onClick={() => {
+
+              setTimeout(()=>{
+                document.querySelector(".Selected-Staff-Container").classList.remove(StaffAnimationClass)
+              },StaffAnimationRemovalDuration)
+
               document.querySelector(".Selected-Staff-Container-TXT h1").innerHTML = "Shaun M."
               document.querySelector(".Selected-Staff-Container-TXT h2").innerHTML = "ACCMA41"
               document.querySelector(".Selected-Staff-Container-TXT p").innerHTML = "1081094"
               document.querySelector(".Selected-Staff-Container-2-description h1").innerHTML = "Local Membership Manager : "
-              document.querySelector(".Selected-Staff-Container-2-description p").innerHTML = "Leader of the team that runs the vACC and maintains the smooth operation of the Virtual airspace."
+              document.querySelector(".Selected-Staff-Container-2-description p").innerHTML = "Local Membership Manager of the MaghrebVacc, responsible for managing the membership of MaghrebVACC and ensuring that members comply with the organization's rules and regulations."
+                         
+              document.querySelector(".Selected-Staff-Container").classList.add(StaffAnimationClass)
+
+            
             }}
           />
+        </div>
+      </div>
+
+      <div className='Footer' id="Footer">
+        <div className='Footer-Container'>
+          <div className='Footer-Links'>
+            <div><img src={SmallLogo}></img></div>
+            <div>
+              <h1>Policies</h1>
+              <a href='#'>General</a>
+              <a href='#'>Training</a>
+              <a href='#'>Membership</a>
+              <a href='#'>Privacy</a>
+            </div>
+            <div>
+              <h1>Resources</h1>
+              <a href='#'>Briefings</a>
+              <a href='#'>Charts</a>
+              <a href='#'>Branding</a>
+            </div>
+            <div>
+              <h1>Controllers</h1>
+              <a href='#'>Roster</a>
+              <a href='#'>Get Started</a>
+              <a href='#'>Docs</a>
+            </div>
+            <div>
+              <h1>Contact</h1>
+              <a href='#'>Contact</a>
+              <a href='#'>Pilot Feedback</a>
+              <a href='#'>management@vatsim.ma</a>
+            </div>
+          </div>
+          <div className='Footer-Foot'>
+            <h1>© 2023 - Maghreb vACC. All Rights Reserved.</h1>
+            <a href='#'><i class="fa-brands fa-instagram"></i></a>
+            <a href='#'><i class="fa-brands fa-youtube"></i></a>
+            <a href='#'><i class="fa-brands fa-discord"></i></a>
+          </div>
         </div>
       </div>
     </div>

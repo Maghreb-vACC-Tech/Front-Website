@@ -181,7 +181,144 @@
   translate: 15vw;
 }
 
+/* //////////////////////////////////////////////////////////// */
+.JoinForm-Question{
+  margin-top: 15vh;
+  width: 100vw;
+  height: 10vh;
+  animation-duration: 1s;
+}
 
+.JoinForm-Question p{
+  color:rgb(7, 120, 148);
+  padding: 2vh;
+  margin-left: 1vw;
+  font-size: 2.5vh;
+  cursor: pointer;
+}
+.JoinForm-Question a:hover{
+  text-decoration: underline;
+}
+.JoinForm-Question h1{
+  font-size: 5vh;
+}
+.JoinForm-Question h2{
+  font-size: 2.5vh;
+  padding-top: 3vh;
+  padding-bottom: 7vh;
+}
+
+/* JoinForm-Question1 */
+
+.JoinForm-Question1{
+  display: block;
+  animation-duration: 1s;
+  margin-top: 15vh;
+  width: 100vw;
+  height: 10vh;
+  translate: 0 -10vh;
+
+}
+
+.JoinForm-Question1 p{
+  font-size: 3vh;
+  padding-bottom: 5vh;
+}
+.JoinForm-Question1 a{
+  padding: 2.5vh;
+  padding-left: 5vh;
+  padding-right: 5vh;
+  color:white;
+  background-color: rgb(25,26,29) ;
+  margin-left: 1vw;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.JoinForm-Question1 a:hover{
+  color:rgb(25,26,29);
+  background-color: rgb(155, 155, 155) ;
+  transition: all 0.3s ease;
+}
+
+/* JoinForm-Question-true  */
+.JoinForm-Question-true {
+  display: none;
+  margin-top: 25vh;
+  width: 100vw;
+  height: 10vh;
+  animation-duration: 1s;
+  translate:25vw -10vh;
+}
+.JoinForm-Question-true p{
+  margin-top: 15vh;
+  color:rgb(230, 230, 230);
+  cursor: pointer;
+  translate:2.5vw -10vh;
+}
+.JoinForm-Question-true p:hover{
+  margin-top: 15vh;
+  color:rgb(172, 172, 172);
+  text-decoration: underline;
+  cursor: pointer;
+}
+.JoinForm-Question-true a{
+  padding: 2.5vh;
+  padding-left: 5vh;
+  padding-right: 5vh;
+  margin-top: 15vh;
+  color:white;
+  background-color: rgb(25,26,29) ;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.JoinForm-Question-true a:hover{
+  color:rgb(25,26,29);
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+
+
+/* JoinForm-Question-false  */
+.JoinForm-Question-false {
+  display: none;
+  margin-top: 25vh;
+  width: 100vw;
+  height: 10vh;
+  animation-duration: 1s;
+  translate: 25vw -10vh;
+}
+.JoinForm-Question-false p{
+  margin-top: 15vh;
+  color:rgb(230, 230, 230);
+  cursor: pointer;
+  translate:3vw -10vh;
+}
+.JoinForm-Question-false p:hover{
+  margin-top: 15vh;
+  color:rgb(172, 172, 172);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.JoinForm-Question-false a{
+  padding: 2.5vh;
+  padding-left: 5vh;
+  padding-right: 5vh;
+  margin-top: 15vh;
+  color:white;
+  background-color: rgb(25,26,29);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.JoinForm-Question-false a:hover{
+  color:rgb(25,26,29);
+  background-color: white;
+  transition: all 0.3s ease;
+}
 
 /* Staff */
 .Staff{
@@ -221,6 +358,7 @@
   height: 70vh;
   translate: 0 10vh;
   border-radius: 3vw;
+  animation-duration: 0.5s;
 }
 .Selected-Staff-Container-1{
   width: 40vw;
@@ -242,7 +380,6 @@
   border-radius: 100vw;
   margin: 1vw;
 }
-
 .Selected-Staff-Container-PDP img{
   background-color: aliceblue;
   width: 15vw;
@@ -255,7 +392,7 @@
 }
 .Selected-Staff-Container-TXT h1{
   color: white;
-  font-size: 3vw;
+  font-size: 2.5vw;
   padding-left: 2vw;
 }
 .Selected-Staff-Container-TXT h2{
@@ -268,18 +405,15 @@
   font-size: 1.2vw;
   padding-left: 2vw;
 }
-
-
 .Selected-Staff-Container-2{
   padding-top: 2vh;
 }
 .Selected-Staff-Container-2 > div{
   width:35vw;
   margin: auto;
-  font-size: 1.2vw;
+  font-size: 1vw;
   color: white;
 }
-
 .Selected-Staff-Container-2 > div > a{
   color: green;
   font-size: 1.5vw;
@@ -290,11 +424,81 @@
   font-size: 1.3vw;
   margin-left: 1vw;
 }
-
 .Selected-Staff-Container-2 > div > *{
   float: left;
 }
-
 .Selected-Staff-Container-2-link{
   translate: 1vw 2vh;
+}
+.Selected-Staff-Container-2-description > p {
+  font-size: 1.1vw;
+}
+
+
+/* Footer */
+.Footer{
+  width: 100vw;
+  height: 80vh;
+  background-color: rgba(18,19,22);
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center;
+}
+.Footer-Container{
+  width: 80vw;
+  height: 40vh;
+  translate: 0 15vh;
+}
+.Footer-Links{
+  width: 80vw;
+  height: 35vh;
+  border-bottom: 1px solid rgb(167, 167, 167);
+}
+.Footer-Links > div{
+  width: 16vw;
+  height: 40vh;
+  float: left;
+}
+.Footer-Links > div > img{
+  width: 7vw;
+  translate: 3vw;
+}
+.Footer-Links > div > h1{
+  color: white;
+  font-size: 1.5vw;
+  
+}
+.Footer-Links > div > a{
+  color: rgb(167, 167, 167);
+  font-size: 1vw;
+  text-decoration: none;
+  display: block;
+  padding-bottom:1vh ;
+}
+.Footer-Links > div > a:hover{
+  color: rgb(201, 201, 201);
+}
+.Footer-Foot{
+  width: 80vw;
+  height: calc(10vh - 1px);
+  translate: 0 -3vh;
+}
+.Footer-Foot > *{
+  float: left;
+}
+.Footer-Foot h1{
+  color: rgb(167, 167, 167);
+  font-size: 2vh;
+  width: 70vw;
+}
+.Footer-Foot a{
+  color: rgb(167, 167, 167);
+  font-size: 2.5vh;
+  padding:1vh ;
+}
+
+.Footer-Foot a:hover{
+  color: rgb(209, 209, 209);
+  font-size: 2.5vh;
+  padding:1vh ;
 }
