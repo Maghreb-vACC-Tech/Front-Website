@@ -33,7 +33,7 @@
   float: left;
   /* height: auto; */
   
-  max-height: 20vh;
+  max-height: 50vh;
   min-height: 10vh;
   overflow: hidden;
   transition: all 0.3s ease;
