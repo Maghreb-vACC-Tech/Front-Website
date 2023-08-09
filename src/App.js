@@ -267,7 +267,7 @@ function App() {
         <div className='Displayed-Staff'>
           
         <DisplayedStaff
-          function="vACC Director"
+          function="Director"
           name="Réda F."
           id="Reda"
           onClick={() => {
@@ -278,8 +278,8 @@ function App() {
             document.querySelector(".Selected-Staff-Container-TXT h1").innerHTML = "Réda F."
             document.querySelector(".Selected-Staff-Container-TXT h2").innerHTML = "ACCMA1"
             document.querySelector(".Selected-Staff-Container-TXT p").innerHTML = "1171306"
-            document.querySelector(".Selected-Staff-Container-2-description h1").innerHTML = "vACC Director : "
-            document.querySelector(".Selected-Staff-Container-2-description p").innerHTML = "Leader of the MaghrebVacc, responsible for overseeing the overall operation of the Virtual Area Control Center."
+            document.querySelector(".Selected-Staff-Container-2-description h1").innerHTML = "Director : "
+            document.querySelector(".Selected-Staff-Container-2-description p").innerHTML = "Leader of the Maghreb vACC, responsible for overseeing the overall operation of the Virtual Area Control Center."
             
                        
             document.querySelector(".Selected-Staff-Container").classList.add(StaffAnimationClass)
@@ -288,7 +288,7 @@ function App() {
           }}
           />
         <DisplayedStaff
-          function="vACC Deputy Director"
+          function="Deputy Director"
           name="Aymen S."
           id="Aymen"
           
@@ -300,8 +300,8 @@ function App() {
             document.querySelector(".Selected-Staff-Container-TXT h1").innerHTML = "Aymen S."
             document.querySelector(".Selected-Staff-Container-TXT h2").innerHTML = "ACCMA2"
             document.querySelector(".Selected-Staff-Container-TXT p").innerHTML = "1356990"
-            document.querySelector(".Selected-Staff-Container-2-description h1").innerHTML = "vACC Deputy Director : "
-            document.querySelector(".Selected-Staff-Container-2-description p").innerHTML = "Deputy Director of the MaghrebVacc, assisting the Director in managing the various departments and ensuring the smooth operation of the center"
+            document.querySelector(".Selected-Staff-Container-2-description h1").innerHTML = "Deputy Director : "
+            document.querySelector(".Selected-Staff-Container-2-description p").innerHTML = "Deputy Director of the Maghreb vACC, assisting the Director in managing the various departments and ensuring the smooth operation of the center"
             
            
             document.querySelector(".Selected-Staff-Container").classList.add(StaffAnimationClass)
@@ -310,7 +310,7 @@ function App() {
           }}
           />
           <DisplayedStaff
-            function="ATC Training Director"
+            function="Head of ATM Training"
             name="Ali B."
             id="Ali"
             
@@ -323,8 +323,8 @@ function App() {
               document.querySelector(".Selected-Staff-Container-TXT h1").innerHTML = "Ali B."
               document.querySelector(".Selected-Staff-Container-TXT h2").innerHTML = "ACCMA3"
               document.querySelector(".Selected-Staff-Container-TXT p").innerHTML = "1448616"
-              document.querySelector(".Selected-Staff-Container-2-description h1").innerHTML = "ATC Training Director : "
-              document.querySelector(".Selected-Staff-Container-2-description p").innerHTML = "Training Director of the MaghrebVacc, responsible for the training and development of air traffic controllers within MaghrebVACC."
+              document.querySelector(".Selected-Staff-Container-2-description h1").innerHTML = "Head of ATM Training : "
+              document.querySelector(".Selected-Staff-Container-2-description p").innerHTML = "Training Director of the Maghreb vACC, responsible for the training and development of air traffic controllers within MaghrebVACC."
                          
               document.querySelector(".Selected-Staff-Container").classList.add(StaffAnimationClass)
 
@@ -332,7 +332,7 @@ function App() {
             }}
           />
           <DisplayedStaff
-            function="Operations Director"
+            function="Head of Operations"
             name="Bobbie C."
             id="Bobbie"
                         
@@ -340,9 +340,8 @@ function App() {
               document.querySelector(".Selected-Staff-Container-TXT h1").innerHTML = "Bobbie C."
               document.querySelector(".Selected-Staff-Container-TXT h2").innerHTML = "ACCMA6"
               document.querySelector(".Selected-Staff-Container-TXT p").innerHTML = "1444138"
-              document.querySelector(".Selected-Staff-Container-2-description h1").innerHTML = "Operations Director : "
+              document.querySelector(".Selected-Staff-Container-2-description h1").innerHTML = "Head of Operations : "
               document.querySelector(".Selected-Staff-Container-2-description p").innerHTML = "Operations Director of the MaghrebVacc, overseeing the day-to-day operations of the center and ensuring the efficient management of resources."
-                         
               document.querySelector(".Selected-Staff-Container").classList.add(StaffAnimationClass)
 
               setTimeout(()=>{
@@ -352,7 +351,7 @@ function App() {
             }}
           />
           <DisplayedStaff
-            function="Tech Director"
+            function="Technology Director"
             name="Ilyass B."
             id="Ilyass"
 
@@ -365,8 +364,8 @@ function App() {
               document.querySelector(".Selected-Staff-Container-TXT h1").innerHTML = "Ilyass B."
               document.querySelector(".Selected-Staff-Container-TXT h2").innerHTML = "ACCMA8"
               document.querySelector(".Selected-Staff-Container-TXT p").innerHTML = "1674212"
-              document.querySelector(".Selected-Staff-Container-2-description h1").innerHTML = "Tech Director : "
-              document.querySelector(".Selected-Staff-Container-2-description p").innerHTML = "Tech Director of the MaghrebVacc, responsible for the technical infrastructure and systems used by MaghrebVACC."
+              document.querySelector(".Selected-Staff-Container-2-description h1").innerHTML = "Technology Director : "
+              document.querySelector(".Selected-Staff-Container-2-description p").innerHTML = "Technology Director of the MaghrebVacc, responsible for the technical infrastructure and systems used by MaghrebVACC."
                          
               document.querySelector(".Selected-Staff-Container").classList.add(StaffAnimationClass)
 
@@ -374,7 +373,7 @@ function App() {
             }}
           />
           <DisplayedStaff
-            function="ATC Training Deputy Director"
+            function="Deputy Head of ATM Training"
             name="Emir D."
             id="Emir"     
 
@@ -394,7 +393,7 @@ function App() {
             }}
           />
           <DisplayedStaff
-            function="Local Membership Manager"
+            function="Head of Membership"
             name="Shaun M."
             id="Shaun"
             onClick={() => {
