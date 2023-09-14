@@ -1,0 +1,187 @@
+
+/* Media Queries */
+@media (max-width: 768px) {
+    *{
+        /* outline: 1px solid red; */
+    }
+    .Navbar{
+        width: 75%;
+        height: 8%;
+        margin: auto;
+        border-radius: 5vw;
+        translate: 3vw 2vh;
+        position: fixed;
+        animation-duration: 1s;
+        transition: all 0.3s ease;
+        z-index: 1;
+        }
+    .Menu{
+        visibility: visible!important;
+        color: white;
+        font-size: 8vw;
+        translate: 40vw;    
+        
+    }
+    .Links-Menu{
+        width: 50vw;
+        height: 60vh;
+        translate: 40vw 5vh;
+        
+    }
+    /* backdrop-filter: contrast(70%) saturate(230%) blur(50px) brightness(110%); */
+    .Links-Menu div {
+        padding: 5vw;
+        background-color: rgb(0,0,0,0.8);
+        backdrop-filter: contrast(70%) saturate(230%) blur(50px) brightness(110%);
+        border-radius: 15px;
+        text-align: center;
+        margin-top: 1vh;
+    }
+    .Links-Menu div a{
+        color: white;
+        text-decoration: none;
+    }
+    .Login{
+        width: 40vw!important;
+    }
+    .GetStarted{
+        width: 40vw!important;
+        background-color: rgb(0, 155, 60)!important;
+        margin-left: 0vw!important;
+    }
+    .Logo img{
+        width: 25vw!important;
+        padding-left: 5vw;
+        transition: all 0.3s ease;
+    }
+    .Links,.Buttons {
+        display: none;
+    }
+
+    /* Adjust styles for smaller screens */
+    .Home{
+        width: 100vw;
+        height: 100vh;
+        background-image: url("../Ressources/Images/Background/1.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+      }
+  
+    .HomeOverlay{
+        width: 100vw;
+        height: 100vh;
+        background: rgb(18,19,22);
+        background: linear-gradient(0deg, rgba(18,19,22,1) 0%, rgba(18,19,22,1) 16%, rgba(18,19,22,0.75) 50%);
+    }
+  
+    .HomeText {
+        width: 100vw;
+        text-align: center;
+        margin: auto;
+        transform: translate(0, 45vh);
+        animation-duration: 1s;
+      }
+  
+    .HomeText h1 {
+        font-size: 7vw;
+    }
+  
+    .HomeText p {
+        font-size: 5vw;
+    }
+      
+    .HomeText > div > * {
+        display: inline;
+        color: white;
+    }
+          
+    /* Adjust styles for smaller screens */
+    .About {
+        width: 100vw;
+        height: 100vh;
+        padding: 5vh 0vw;
+    }
+          
+    .About div {
+        width: 100%;
+        float: none;
+        margin-top: 5vh;
+        height: auto;
+    }
+          
+    .AboutText h1 {
+        text-align: center;
+        font-size: 4vh;
+        width: 80%;
+        margin: auto;
+    }
+          
+    .AboutText p {
+        text-align: center;
+        font-size: 1.8vh;
+        width: 80%;
+        margin: auto;
+    }
+    .Events{
+        width: 100vw;
+        height: 120vh;
+        background-color: rgba(18,19,22);
+    }    
+    .Events > div > div {
+        float: none;
+        width: 90%;
+        height: 200px;
+        margin: auto;
+        margin-top: auto;
+        text-align: center;
+    }
+    .Events > div > div > img {
+        /* float: left; */
+        width: 90%;
+        text-align: center;
+        border-radius: 30px;
+        translate: -0vw;
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+    .FAQ{
+        width: 100vw;
+    }
+    .FAQ-Title{
+        float: left;
+        text-align: center;
+        width: 100vw;
+        height: 10vh;
+        margin: auto;    
+        padding-bottom: 5vh;
+    }
+    .Question {
+        width: 75vw;
+    }
+
+    .Selected-Staff {
+        display: none;
+    }
+    .Displayed-Staff {
+        width: 100vw;
+        height: 100vh;
+    }
+    .Displayed-Staff-Container {
+        width: 45vw;
+        height: 20vh;
+    }
+    .Displayed-Staff-Container-PDP {
+        width: 25vw;
+    }
+    .Displayed-Staff-Container-TXT {
+        width: 15vw;
+        height: 20vh;
+        translate: 1.5vw;
+    }
+    .Displayed-Staff-Container-TXT h1{
+        font-size: 25vw;
+    }
+}
+
+

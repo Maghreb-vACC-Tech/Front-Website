@@ -75,11 +75,21 @@
     width: 6vw;
 
 }
-.Login a{
+/* .Login a{
     color: rgb(153,153,153);
     text-decoration: none;
+} */
+.Login input{
+    background-color: transparent;
+    color: white;
+    width: 6vw;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    translate: 0 -1vh;
 }
-
 .GetStarted{
     background-color: rgb(77,77,77);
     margin-top: 5px;
@@ -93,28 +103,7 @@
     text-decoration: none;
 }
 
-    /* Media Queries */
-    @media (max-width: 768px) {
-    .Navbar{
-        width: 90%;
-        height: 8%;
-        /* background-color: rgb(18,19,22,0.85); */
-        margin: auto;
-        border-radius: 5vw;
-        /* box-shadow: 0.1px 0.1px 2vw rgb(27, 27, 27); */
-        translate: 3vw 2vh;
-        position: fixed;
-        animation-duration: 1s;
-        transition: all 0.3s ease;
-        z-index: 1;
-    }
-    .Logo img{
-        width: 40vw;
-        translate: 3vw 2vh;
-        transition: all 0.3s ease;
-    }
-    .Links,
-    .Buttons {
-      display: none;
-    }
+
+.Menu , .Links-Menu{
+    visibility: hidden;
 }
