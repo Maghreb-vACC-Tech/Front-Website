@@ -1,0 +1,27 @@
+
+@media (max-width: 900px) {
+    .Links > div > a{
+        font-size: 1.5vh!important;
+    }
+    .Logo {
+        width: 15%;
+    }
+    .Links {
+        width: 55%;
+    }
+    .Buttons {
+        width: 30%;
+    }
+    .GetStarted {
+        width: 15vw!important;
+        height: 3vh!important;
+    }
+    .Buttons div a {
+        font-size: 1.5vh!important;
+    }
+    .Buttons div {
+        float: left;
+        height: 3vh;
+    }
+    
+}

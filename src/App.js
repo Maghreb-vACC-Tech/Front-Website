@@ -1,5 +1,6 @@
 import './App.css';
 import './Styles/Mobile.css'
+import './Styles/VerticalScreen.css'
 
 import React , { useState, useEffect } from "react"
 

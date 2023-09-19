@@ -232,6 +232,9 @@
         translate: 3vw;
         display: block;
     }
+    .Menu{
+        display: inline!important;
+    }
 }
 
 
