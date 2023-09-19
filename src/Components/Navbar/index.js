@@ -5,17 +5,19 @@ import "./index.css"
 function Navbar(props){
     let i = true;
     function LinksMenuMobileAnimation(){
-        if ( i == true){
-            document.querySelector(".Links-Menu").style.display = "none"
-            document.querySelector(".Links-Menu").classList.add("animate__fadeOutRight")
-            i = false
-            // alert(i)
-        }
-        else{
+        if ( i ){
             document.querySelector(".Links-Menu").style.display = "block"
             document.querySelector(".Links-Menu").classList.add("animate__fadeInRight")
+            i = false
+            // alert(i)
+            console.log(i)
+        }
+        else{
+            document.querySelector(".Links-Menu").style.display = "none"
             //animate__fadeInRight
+            document.querySelector(".Links-Menu").classList.remove("animate__fadeInRight")
             i = true
+            console.log(i)
         }
     }
     return(

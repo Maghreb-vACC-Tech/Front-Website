@@ -33,7 +33,7 @@ function App() {
 
     /////////////////////////////// Params////////////////////////////////
 
-    // Staff
+    // Staff 
     const StaffAnimationClass = "animate__fadeIn"
     const StaffAnimationRemovalDuration = 500
 
@@ -127,6 +127,28 @@ function App() {
         }, []);
 
 
+          let PreviosScrollValue = 0;
+
+            function hideNavBar() {
+
+            if(PreviosScrollValue > window.scrollY) {
+                // up
+                document.querySelector(".Navbar").style.transform = "translateY(0vh)"
+                console.log("up")
+            }
+
+            if(PreviosScrollValue < window.scrollY) {
+                // down
+                document.querySelector(".Navbar").style.transform = "translateY(-10vh)"
+                console.log("down")
+            }
+
+            PreviosScrollValue = window.scrollY;
+
+            }
+
+            window.addEventListener('scroll', hideNavBar); 
+
 
     return(
         <div className="App">
@@ -142,7 +164,7 @@ function App() {
                 <h1>Maghreb vACC</h1>
                 </div>
                 <div>
-                <p>Fly and control over the Atlas mountains</p>
+                <p  onClick={()=>{hideNavBar()}}>Fly and control over the Atlas mountains</p>
                 </div>
             </div>
             <div className='ScrollDown animate__fadeInUp'>
@@ -322,7 +344,7 @@ function App() {
             }}
             />
             <DisplayedStaff
-                function="Head of ATM Training"
+                function="Special Advisor"
                 name="Ali B."
                 id="Ali"
                 
@@ -385,7 +407,7 @@ function App() {
                 }}
             />
             <DisplayedStaff
-                function="Deputy Head of ATM Training"
+                function="Head of ATM Training"
                 name="Emir D."
                 id="Emir"     
 
@@ -404,7 +426,7 @@ function App() {
                 
                 }}
             />
-            <DisplayedStaff
+            {/* <DisplayedStaff
                 function="Head of Membership"
                 name="Shaun M."
                 id="Shaun"
@@ -424,7 +446,7 @@ function App() {
 
                 
                 }}
-            />
+            /> */}
             </div>
         </div>
 

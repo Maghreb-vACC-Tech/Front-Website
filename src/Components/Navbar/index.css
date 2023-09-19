@@ -104,6 +104,12 @@
 }
 
 
-.Menu , .Links-Menu{
+/* .Menu , .Links-Menu{
     visibility: hidden;
+} */
+
+.Links-Menu{
+    /* visibility: hidden; */
+    display: none;
+    animation-duration: 0.5s;
 }
