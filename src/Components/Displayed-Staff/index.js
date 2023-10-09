@@ -9,7 +9,7 @@ function DisplayedStaff(props){
         if (props.state === "selected"){
             document.getElementById(props.id).classList.add("selected")
         }
-    },[])
+    },[props.id, props.state])
     return(
         
         <div className='Displayed-Staff-Container' id={props.id} onClick={props.onClick}>

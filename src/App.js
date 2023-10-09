@@ -201,13 +201,13 @@ function App() {
             </div>
             <div>
             <div className='event animate__fadeInLeft'>
-                <img src={event1}></img>
+                <img src={event1} alt="Event 1"> </img>
             </div>
             <div className='event animate__fadeIn'>
-                <img src={event2}></img>
+                <img src={event2}alt="Event 1" ></img>
             </div>
             <div className='event animate__fadeInRight'>
-                <img src={event3}></img>
+                <img src={event3}alt="Event 1" ></img>
             </div>
             </div>
             <div className='animate__fadeInUp'>
