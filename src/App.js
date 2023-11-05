@@ -201,13 +201,13 @@ function App() {
             </div>
             <div>
             <div className='event animate__fadeInLeft'>
-                <img src={event1} alt="Event 1"> </img>
+                <img src={event1} alt="Event 1"/>
             </div>
             <div className='event animate__fadeIn'>
-                <img src={event2}alt="Event 1" ></img>
+                <img src={event2}alt="Event 1"/>
             </div>
             <div className='event animate__fadeInRight'>
-                <img src={event3}alt="Event 1" ></img>
+                <img src={event3}alt="Event 1"/>
             </div>
             </div>
             <div className='animate__fadeInUp'>
@@ -454,7 +454,7 @@ function App() {
         <div className='Footer' id="Footer">
             <div className='Footer-Container'>
             <div className='Footer-Links'>
-                <div><img src={SmallLogo}></img></div>
+                <div><img src={SmallLogo}/></div>
                 <div>
                 <h1>Policies</h1>
                 <a href='#'>General</a>
