@@ -32,12 +32,70 @@ function App() {
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    /////////////////////////////// Params////////////////////////////////
+    /////////////////////////////// Params ////////////////////////////////
 
     // Staff 
     const StaffAnimationClass = "animate__fadeIn"
     const StaffAnimationRemovalDuration = 500
+    // For HeaderBar
+    const [ScrollPositionY, setScrollPositionY] = useState(0);
+    const [Logo, SetLogo] = useState(BigLogo);
+    let PreviousScrollValue = 0;
 
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+      // Scroll Effect 
+    useEffect(() => {
+        const windowWidth = window.innerWidth;
+        if(windowWidth > 768){
+        window.addEventListener("scroll", () => {
+        const scrollPosition = window.scrollY;
+        setScrollPositionY(scrollPosition);
+
+        
+        //Scroll Animation For NavBar 
+        if (scrollPosition > 100){
+        document.querySelector(".Navbar").style.backgroundColor = "rgba(25 ,26 ,29 , 0.95)"
+        document.querySelector(".Navbar").style.boxShadow = "0.1px 0.1px 1vw #0F1011"
+        document.querySelector(".GetStarted").style.backgroundColor = "rgb(0,155,60)"
+        document.querySelector(".Logo-Image").style.width = "4vw"
+        document.querySelector(".Navbar").style.backdropFilter  = "contrast(90%) saturate(230%) blur(20px) brightness(110%)"
+        SetLogo(SmallLogo)
+        }
+        if (scrollPosition < 100){
+        document.querySelector(".Navbar").style.backgroundColor = "rgba(18, 19, 22, 0)"
+        document.querySelector(".GetStarted").style.backgroundColor = "rgb(77,77,77)"
+        document.querySelector(".Navbar").style.boxShadow = "none"
+        document.querySelector(".Logo-Image").style.width = "7vw"
+        document.querySelector(".Navbar").style.backdropFilter  = "contrast(100%) saturate(100%) blur(0px) brightness(100%)"
+        SetLogo(BigLogo)
+        } 
+        
+        //Scroll Animation For About 
+        if (scrollPosition > 500){
+        document.querySelector(".AboutText").style.visibility="visible"
+        document.querySelector(".AboutText").classList.add("animate__fadeInLeft")
+        }
+
+        //Scroll Animation For About 
+        //document.querySelectorAll(".event").style.visibility = 
+        if (scrollPosition > 800){
+        document.querySelector(".AboutText").style.visibility="visible"
+        document.querySelector(".AboutText").classList.add("animate__fadeInLeft")
+        }
+        
+        // if (scrollPosition > 1200){
+        //   document.querySelectorAll(".event").style.visibility="visible"
+        // }
+
+        });
+    }
+
+
+    
+
+    }, []);
 
     // Join Code
     
@@ -65,90 +123,38 @@ function App() {
 
 
 
-        const [ScrollPositionY, setScrollPositionY] = useState(0);
-        const [Logo, SetLogo] = useState(BigLogo);
+    
 
 
 
 
 
 
-    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-      // Scroll Effect 
-        useEffect(() => {
-            const windowWidth = window.innerWidth;
-            if(windowWidth > 768){
-            window.addEventListener("scroll", () => {
-            const scrollPosition = window.scrollY;
-            setScrollPositionY(scrollPosition);
+    function hideNavBar() {
 
-            
-            //Scroll Animation For NavBar 
-            if (scrollPosition > 100){
-            document.querySelector(".Navbar").style.backgroundColor = "rgba(25 ,26 ,29 , 0.95)"
-            document.querySelector(".Navbar").style.boxShadow = "0.1px 0.1px 1vw #0F1011"
-            document.querySelector(".GetStarted").style.backgroundColor = "rgb(0,155,60)"
-            document.querySelector(".Logo-Image").style.width = "4vw"
-            document.querySelector(".Navbar").style.backdropFilter  = "contrast(90%) saturate(230%) blur(20px) brightness(110%)"
-            SetLogo(SmallLogo)
-            }
-            if (scrollPosition < 100){
-            document.querySelector(".Navbar").style.backgroundColor = "rgba(18, 19, 22, 0)"
-            document.querySelector(".GetStarted").style.backgroundColor = "rgb(77,77,77)"
-            document.querySelector(".Navbar").style.boxShadow = "none"
-            document.querySelector(".Logo-Image").style.width = "7vw"
-            document.querySelector(".Navbar").style.backdropFilter  = "contrast(100%) saturate(100%) blur(0px) brightness(100%)"
-            SetLogo(BigLogo)
-            } 
-            
-            //Scroll Animation For About 
-            if (scrollPosition > 500){
-            document.querySelector(".AboutText").style.visibility="visible"
-            document.querySelector(".AboutText").classList.add("animate__fadeInLeft")
-            }
+        if(PreviousScrollValue > window.scrollY) {
+            // up
+            document.querySelector(".Navbar").style.transform = "translateY(0vh)"
+            // console.log("up")
+            // console.log("window.scrollY : " , window.scrollY)
+            // console.log("PreviousScrollValue : " , PreviousScrollValue)
+            PreviousScrollValue = window.scrollY;
+        }
 
-            //Scroll Animation For About 
-            //document.querySelectorAll(".event").style.visibility = 
-            if (scrollPosition > 800){
-            document.querySelector(".AboutText").style.visibility="visible"
-            document.querySelector(".AboutText").classList.add("animate__fadeInLeft")
-            }
-            
-            // if (scrollPosition > 1200){
-            //   document.querySelectorAll(".event").style.visibility="visible"
-            // }
-
-            });
+        if(PreviousScrollValue < window.scrollY) {
+            // down
+            // PreviousScrollValue = window.scrollY;
+            document.querySelector(".Navbar").style.transform = "translateY(-20vh)"
+            // console.log("down")
+            // console.log("window.scrollY : " , window.scrollY)
+            // console.log("PreviousScrollValue : " , PreviousScrollValue)
+            PreviousScrollValue = window.scrollY;
         }
 
 
-        
+    }
 
-        }, []);
-
-
-          let PreviosScrollValue = 0;
-
-            function hideNavBar() {
-
-            if(PreviosScrollValue > window.scrollY) {
-                // up
-                document.querySelector(".Navbar").style.transform = "translateY(0vh)"
-                console.log("up")
-            }
-
-            if(PreviosScrollValue < window.scrollY) {
-                // down
-                document.querySelector(".Navbar").style.transform = "translateY(-10vh)"
-                console.log("down")
-            }
-
-            PreviosScrollValue = window.scrollY;
-
-            }
-
-            window.addEventListener('scroll', hideNavBar); 
+    window.addEventListener('scroll', hideNavBar); 
 
 
     return(
