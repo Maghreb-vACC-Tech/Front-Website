@@ -1,5 +1,4 @@
 import LoginBtn from "./LoginBtn"
-
 import "./index.css"
 
 function Navbar(props){
@@ -23,24 +22,22 @@ function Navbar(props){
     return(
         <div className="Navbar animate__fadeInDown">
             <div className="Logo">
-                <img className="Logo-Image" src={props.Logo}></img>
+                <img className="Logo-Image" alt="" src={props.Logo}></img>
             </div>
 
             <div className="Links">
                 <div>
                     <a href="#Home">Home</a>
                 </div>
+                    {props.Event}
                 <div>
-                    <a href="#Events">Events</a>
-                </div>
-                <div>
-                    <a href="#FAQ">FAQ</a>
+                    <a href="#Partners">Partners</a>
                 </div>
                 <div>
                     <a href="#Staff">Our Team</a>
                 </div>
                 <div>
-                    <a href="#">Contact</a>
+                    <a href="#Contact">Contact</a>
                 </div>
             </div>
 
@@ -49,7 +46,7 @@ function Navbar(props){
                     <LoginBtn/>
                 </div>
                 <div className="GetStarted">
-                    <a href="#">Get Started</a>
+                    <a href="#FAQ">Questions</a>
                 </div>
 
             </div>
@@ -63,22 +60,21 @@ function Navbar(props){
                     <a href="#Home">Home</a>
                 </div>
                 <div>
-                    <a href="#Events">Events</a>
                 </div>
-                <div>
+                {/* <div>
                     <a href="#FAQ">FAQ</a>
-                </div>
+                </div> */}
                 <div>
                     <a href="#Staff">Our Team</a>
                 </div>
                 <div>
-                    <a href="#">Contact</a>
+                    <a href="#Contact">Contact</a>
                 </div>
                 <div className="Login">
                     <LoginBtn/>
                 </div>
                 <div className="GetStarted">
-                    <a href="#">Get Started</a>
+                    <a href="#FAQ">Questions</a>
                 </div>
             </div>
         </div>

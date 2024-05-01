@@ -1,4 +1,6 @@
-import { useState , Redirect } from 'react';
+import { useState } from 'react';
+// import { useState , Redirect } from 'react';
+import { Navigate } from 'react-router-dom';
 
 
 function LoginBtn() {
@@ -11,7 +13,7 @@ function LoginBtn() {
     let authorizeUrl = ''
   
     const prod = false
-  
+    setAuthRedirect('')
     if ( prod ) {
   
       authorizeUrl = `https://auth.vatsim.net/oauth/authorize?
@@ -42,7 +44,7 @@ function LoginBtn() {
         </form>
   
         {authRedirect && 
-          <Redirect 
+          <Navigate 
             to={`/callback?code=${authRedirect}`}
           />
         }
