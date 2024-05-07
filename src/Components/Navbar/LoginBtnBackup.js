@@ -12,13 +12,13 @@ function LoginBtn() {
     
     let authorizeUrl = ''
   
-    const prod = true
+    const prod = false
     setAuthRedirect('')
     if ( prod ) {
   
       authorizeUrl = `https://auth.vatsim.net/oauth/authorize?
         client_id=1284&
-        redirect_uri=https://api.vatsim.ma/authcode& 
+        redirect_uri=http://api.vatsim.ma:1000/authcode& 
         response_type=code&
         scope=full_name+vatsim_details+email+country`;
         
@@ -27,7 +27,7 @@ function LoginBtn() {
       
       authorizeUrl = `https://auth-dev.vatsim.net/oauth/authorize?
         client_id=619&
-        redirect_uri=https://localhost:1000/authcode&
+        redirect_uri=http://localhost:1000/authcode&
         response_type=code&
         scope=full_name+vatsim_details+email+country`;
   
