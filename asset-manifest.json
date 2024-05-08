@@ -1,25 +1,22 @@
 {
   "files": {
-    "main.css": "/Front-Website/static/css/main.ff189123.css",
-    "main.js": "/Front-Website/static/js/main.066154de.js",
-    "static/js/787.2f4d41ad.chunk.js": "/Front-Website/static/js/787.2f4d41ad.chunk.js",
-    "static/media/1.png": "/Front-Website/static/media/1.aa41c688e62042b94d8f.png",
-    "static/media/3.jpg": "/Front-Website/static/media/3.91997c3027c683377193.jpg",
-    "static/media/2.jpg": "/Front-Website/static/media/2.23f305ee948782196c6c.jpg",
-    "static/media/1.jpg": "/Front-Website/static/media/1.184f03c42d6815db9cd8.jpg",
-    "static/media/AFR.png": "/Front-Website/static/media/AFR.981f7b82f3f5e5fba7d0.png",
-    "static/media/Maghreb_vACC_Full_white_trans.png": "/Front-Website/static/media/Maghreb_vACC_Full_white_trans.7f8e6903aa97e8d5478e.png",
-    "static/media/vRAM.png": "/Front-Website/static/media/vRAM.f4357fdd0b0b154ec8dc.png",
-    "static/media/vABY.png": "/Front-Website/static/media/vABY.2e652993d104560e6203.png",
-    "static/media/logo.svg": "/Front-Website/static/media/logo.a9631002553fb261c15d8dec47f6d84d.svg",
-    "static/media/logo-big.svg": "/Front-Website/static/media/logo-big.ebf7a2795ce7354d21b04abc8dc9b135.svg",
-    "index.html": "/Front-Website/index.html",
-    "main.ff189123.css.map": "/Front-Website/static/css/main.ff189123.css.map",
-    "main.066154de.js.map": "/Front-Website/static/js/main.066154de.js.map",
-    "787.2f4d41ad.chunk.js.map": "/Front-Website/static/js/787.2f4d41ad.chunk.js.map"
+    "main.css": "/Maghreb-vACC-Tech/Front-Website/static/css/main.f7ed7a16.css",
+    "main.js": "/Maghreb-vACC-Tech/Front-Website/static/js/main.20d1fe56.js",
+    "static/js/787.2f4d41ad.chunk.js": "/Maghreb-vACC-Tech/Front-Website/static/js/787.2f4d41ad.chunk.js",
+    "static/media/1.png": "/Maghreb-vACC-Tech/Front-Website/static/media/1.aa41c688e62042b94d8f.png",
+    "static/media/AFR.png": "/Maghreb-vACC-Tech/Front-Website/static/media/AFR.981f7b82f3f5e5fba7d0.png",
+    "static/media/Maghreb_vACC_Full_white_trans.png": "/Maghreb-vACC-Tech/Front-Website/static/media/Maghreb_vACC_Full_white_trans.7f8e6903aa97e8d5478e.png",
+    "static/media/vRAM.png": "/Maghreb-vACC-Tech/Front-Website/static/media/vRAM.f4357fdd0b0b154ec8dc.png",
+    "static/media/vABY.png": "/Maghreb-vACC-Tech/Front-Website/static/media/vABY.2e652993d104560e6203.png",
+    "static/media/logo.svg": "/Maghreb-vACC-Tech/Front-Website/static/media/logo.a9631002553fb261c15d8dec47f6d84d.svg",
+    "static/media/logo-big.svg": "/Maghreb-vACC-Tech/Front-Website/static/media/logo-big.ebf7a2795ce7354d21b04abc8dc9b135.svg",
+    "index.html": "/Maghreb-vACC-Tech/Front-Website/index.html",
+    "main.f7ed7a16.css.map": "/Maghreb-vACC-Tech/Front-Website/static/css/main.f7ed7a16.css.map",
+    "main.20d1fe56.js.map": "/Maghreb-vACC-Tech/Front-Website/static/js/main.20d1fe56.js.map",
+    "787.2f4d41ad.chunk.js.map": "/Maghreb-vACC-Tech/Front-Website/static/js/787.2f4d41ad.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ff189123.css",
-    "static/js/main.066154de.js"
+    "static/css/main.f7ed7a16.css",
+    "static/js/main.20d1fe56.js"
   ]
 }
