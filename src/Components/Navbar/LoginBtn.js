@@ -12,7 +12,7 @@ function LoginBtn() {
     
     let authorizeUrl = ''
   
-    const prod = true
+    const prod = false
     setAuthRedirect('')
     if ( prod ) {
   

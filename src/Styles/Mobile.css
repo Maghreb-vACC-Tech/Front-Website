@@ -5,7 +5,7 @@
         /* outline: 1px solid red; */
     }
     .Navbar{
-        width: 75%;
+        width: none!important;
         height: 8%;
         margin: auto;
         border-radius: 5vw;
@@ -14,20 +14,12 @@
         animation-duration: 1s;
         transition: all 0.3s ease;
         z-index: 1;
+        display: flex;
+        justify-content: center;
         }
-    .Menu{
-        visibility: visible!important;
-        color: white;
-        font-size: 8vw;
-        translate: 40vw;    
-        
-    }
-    .Links-Menu{
-        width: 50vw;
-        height: 60vh;
-        translate: 0vw 5vh;
-        
-    }
+    .Navbar > div{
+        float: none!important;
+        }
     .Login form input{
         width: 20vw;
         translate: 0 0vh;
@@ -82,9 +74,11 @@
     .HomeText {
         width: 100vw;
         text-align: center;
-        margin: auto;
         transform: translate(0, 45vh);
         animation-duration: 1s;
+        /* display: flex;
+        justify-content: center;
+        align-items: center; */
       }
   
     .HomeText h1 {
@@ -92,12 +86,19 @@
     }
   
     .HomeText p {
-        font-size: 5vw;
+        font-size: 4vw;
     }
       
     .HomeText > div > * {
-        display: inline;
-        color: white;
+        /* display: inline; */
+        /* color: white; */
+    }
+    .ScrollDown{
+        display: flex;
+        justify-content: center;
+        width: fit-content;
+        transform: translate(0, 85vh); 
+        
     }
           
     /* Adjust styles for smaller screens */
@@ -113,7 +114,11 @@
         margin-top: 5vh;
         height: auto;
     }
-          
+         
+    .AboutImage{
+        display: none;
+    }
+
     .AboutText h1 {
         text-align: center;
         font-size: 4vh;
@@ -150,6 +155,27 @@
         align-items: center;
         margin-top: 1vh;
     }
+    .event > a > img {
+        width: 80vw;
+        border-radius: 15px;
+    }
+    
+    .PartnersContainer{
+        display:block!important;
+    }
+    .PartnersContainer > a{
+        width: 60vw!important;
+        display:block!important;
+    }
+    .PartnersContainer > a > img{
+        width: 60vw!important;
+        display:block!important;
+        padding-top: 20vw;
+        /* text-align: center; */
+        
+    }
+
+
     .FAQ{
         width: 100vw;
     }
@@ -157,7 +183,7 @@
         float: left;
         text-align: center;
         width: 100vw;
-        height: 10vh;
+        height: 20vh;
         margin: auto;    
         padding-bottom: 5vh;
     }
@@ -165,6 +191,13 @@
         translate: 0vw;
         width: 75vw;
     }
+    .Question-Container {
+        height: 10vh;
+    }
+    .Question-Answer {
+        height: auto;
+    }
+
     .Staff{
         height: 200vh;
     }
@@ -181,8 +214,9 @@
         translate: 3vw;
     }
     .Displayed-Staff-Container-PDP {
-        width: 40vw!important;
-        height: 40vw!important;
+        width: 20vw!important;
+        height: 20vw!important;
+        margin:5vw!important;
     }
     .Displayed-Staff-Container-TXT {
         width: 40vw!important;
@@ -234,6 +268,9 @@
     }
     .Menu{
         display: inline!important;
+    }
+    .Footer{
+        display: none;
     }
 }
 
