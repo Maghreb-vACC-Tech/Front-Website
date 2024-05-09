@@ -3,22 +3,22 @@ import "./index.css"
 
 function Navbar(props){
     let i = true;
-    function LinksMenuMobileAnimation(){
-        if ( i ){
-            document.querySelector(".Links-Menu").style.display = "block"
-            document.querySelector(".Links-Menu").classList.add("animate__fadeInRight")
-            i = false
-            // alert(i)
-            console.log(i)
-        }
-        else{
-            document.querySelector(".Links-Menu").style.display = "none"
-            //animate__fadeInRight
-            document.querySelector(".Links-Menu").classList.remove("animate__fadeInRight")
-            i = true
-            console.log(i)
-        }
-    }
+    // function LinksMenuMobileAnimationmation(){
+    //     if ( i ){
+    //         document.querySelector(".Links-Menu").style.display = "block"
+    //         document.querySelector(".Links-Menu").classList.add("animate__fadeInRight")
+    //         i = false
+    //         // alert(i)
+    //         console.log(i)
+    //     }
+    //     else{
+    //         document.querySelector(".Links-Menu").style.display = "none"
+    //         //animate__fadeInRight
+    //         document.querySelector(".Links-Menu").classList.remove("animate__fadeInRight")
+    //         i = true
+    //         console.log(i)
+    //     }
+    // }
     return(
         <div className="Navbar animate__fadeInDown">
             <div className="Logo">
@@ -51,19 +51,16 @@ function Navbar(props){
 
             </div>
 
-            <div className="Menu" onClick={LinksMenuMobileAnimation}>
+            {/* <div className="Menu" >
                 <i class="fa-solid fa-bars"></i>
-            </div>
+            </div> */}
 
-            <div className="Links-Menu">
+            {/* <div className="Links-Menu">
                 <div>
                     <a href="#Home">Home</a>
                 </div>
                 <div>
                 </div>
-                {/* <div>
-                    <a href="#FAQ">FAQ</a>
-                </div> */}
                 <div>
                     <a href="#Staff">Our Team</a>
                 </div>
@@ -76,7 +73,7 @@ function Navbar(props){
                 <div className="GetStarted">
                     <a href="#FAQ">Questions</a>
                 </div>
-            </div>
+            </div> */}
         </div>
     )
 }

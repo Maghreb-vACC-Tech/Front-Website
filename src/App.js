@@ -9,11 +9,6 @@ import SmallLogo from "./Ressources/Images/Logo/logo.svg"
 import BigLogo from "./Ressources/Images/Logo/logo-big.svg"
 import WhiteBigLogo from "./Ressources/Images/Logo/Maghreb_vACC_Full_white_trans.png"
 
-// Events
-import event1 from "./Ressources/Images/Events/1.jpg"
-import event2 from "./Ressources/Images/Events/2.jpg"
-import event3 from "./Ressources/Images/Events/3.jpg"
-
 // Partners
 import vAFR from "./Ressources/Images/Partners/AFR.png"
 import vRAM from "./Ressources/Images/Partners/vRAM.png"
@@ -44,14 +39,14 @@ function App() {
     useEffect(() => {
 
         // Events
-            fetch("http://127.0.0.1:1000/MaghrebEvents")
-              .then(res => res.json())
-              .then(data => {
+        fetch("http://127.0.0.1:1000/MaghrebEvents")
+            .then(res => res.json())
+            .then(data => {
                 setEvents(data);
-              })
-              .catch(error => {
+            })
+            .catch(error => {
                 console.error("Error fetching events:", error);
-              });
+            });
 
 
 
@@ -83,17 +78,6 @@ function App() {
             document.querySelector(".Navbar").style.backdropFilter  = "contrast(100%) saturate(100%) blur(0px) brightness(100%)"
             SetLogo(BigLogo)
         } 
-        
-        //Scroll Animation For About 
-        if (scrollPosition > 500){
-            document.querySelector(".AboutText").style.visibility="visible"
-            document.querySelector(".AboutText").classList.add("animate__fadeInLeft")
-        }
-
-        if (scrollPosition > 800){
-            document.querySelector(".AboutText").style.visibility="visible"
-            document.querySelector(".AboutText").classList.add("animate__fadeInLeft")
-        }
         
 
         });
@@ -152,7 +136,7 @@ function App() {
                 Event={
                     events.length > 0 ? (
                         <div>
-                         <a href="#Events">Events</a>
+                            <a href="#Events">Events</a>
                         </div>
                     ) : (
                         <>
@@ -206,18 +190,16 @@ function App() {
                     <h1>Upcoming Events</h1>
                 </div>
                 <div>
-                    <div className='event animate__fadeInLeft'>
-                        <img src={event1} alt="Event 1" />
-                    </div>
-                    <div className='event animate__fadeIn'>
-                        <img src={event2} alt="Event 1" />
-                    </div>
-                    <div className='event animate__fadeInRight'>
-                        <img src={event3} alt="Event 1" />
-                    </div>
+                    {events.map((event) => (
+                        <div className='event animate__fadeInLeft'>
+                            <a href={event.link}>
+                                <img src={event.banner} alt="Event" />
+                            </a>
+                        </div>
+                    ))}
                 </div>
                 <div className='animate__fadeInUp'>
-                    <a href='#General'>Check More</a>
+                    <a href='https://vatsim.net/events/'>Check More</a>
                 </div>
             </div>
             )}
@@ -294,13 +276,6 @@ function App() {
                 sign = "3"
             />
             
-            {/* <Question
-                Question = "MAGX ?"
-                Answer = "The Maghreb VACC has a platfrom that helps controllers and staff doing their jobs"
-                index = "false"
-                number = "Q4"
-                sign = "4"
-            /> */}
         </div>
 
         {/* Staff */}
@@ -485,12 +460,13 @@ function App() {
                 </div>
                 <div>
                 <h1>Contact</h1>
-                <a href='#General'>Pilot Feedback</a>
-                <a href='mailto:management@vatsim.ma'>management@vatsim.ma</a>
+                <a href='https://community.vatsim.net/login'>Vatsim community</a>
+                <a href='mailto:management@vatsim.ma'>Pilot Feedback</a>
+                {/* <a href='mailto:management@vatsim.ma'>management@vatsim.ma</a> */}
                 </div>
             </div>
             <div className='Footer-Foot'>
-                <h1>© 2023 - Maghreb vACC. All Rights Reserved.</h1>
+                <h1>© 2024 - Maghreb vACC. All Rights Reserved.</h1>
                 <a href='https://www.instagram.com/maghrebvacc'><i class="fa-brands fa-instagram"></i></a>
                 <a href='https://www.youtube.com/@MaghrebvACC'><i class="fa-brands fa-youtube"></i></a>
                 <a href='https://community.vatsim.net/'><i class="fa-brands fa-discord"></i></a>
