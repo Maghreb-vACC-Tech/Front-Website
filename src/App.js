@@ -39,7 +39,7 @@ function App() {
     useEffect(() => {
 
         // Events
-        fetch("http://127.0.0.1:1000/MaghrebEvents")
+        fetch("https://api.vatsim.ma/MaghrebEvents")
             .then(res => res.json())
             .then(data => {
                 setEvents(data);
