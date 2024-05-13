@@ -2,7 +2,7 @@ import LoginBtn from "./LoginBtn"
 import "./index.css"
 
 function Navbar(props){
-    let i = true;
+    // let i = true;
     // function LinksMenuMobileAnimationmation(){
     //     if ( i ){
     //         document.querySelector(".Links-Menu").style.display = "block"

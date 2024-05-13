@@ -22,10 +22,11 @@ import Question from './Components/FAQ';
 import DisplayedStaff from './Components/Displayed-Staff';
 
 
+import Data from './MaghrebSetup'
+
+
 function App() {
-
     const [events, setEvents] = useState([]);
-
     // Staff 
     const StaffAnimationClass = "animate__fadeIn"
     const StaffAnimationRemovalDuration = 500
@@ -39,7 +40,18 @@ function App() {
     useEffect(() => {
 
         // Events
-        fetch("https://api.vatsim.ma/MaghrebEvents")
+        if(Data.dev){
+            fetch("http://localhost:1000/MaghrebEvents")
+            .then(res => res.json())
+            .then(data => {
+                setEvents(data);
+            })
+            .catch(error => {
+                console.error("Error fetching events:", error);
+            });
+        }
+        else{
+            fetch("https://api.vatsim.ma/MaghrebEvents")
             .then(res => res.json())
             .then(data => {
                 setEvents(data);
@@ -48,6 +60,7 @@ function App() {
                 console.error("Error fetching events:", error);
             });
 
+        }
 
 
 
