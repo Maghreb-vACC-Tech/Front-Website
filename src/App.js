@@ -47,7 +47,7 @@ function App() {
                 setEvents(data);
             })
             .catch(error => {
-                console.error("Error fetching events:", error);
+                console.error("HandledError ", error);
             });
         }
         else{
@@ -57,7 +57,7 @@ function App() {
                 setEvents(data);
             })
             .catch(error => {
-                console.error("Error fetching events:", error);
+                console.error("HandledError :", error);
             });
 
         }
@@ -218,6 +218,8 @@ function App() {
             )}
         
         
+        
+        
         {/* Partners */}
         <div className='Partners' id='Partners'>
             <div><h1>Our partners</h1></div>
@@ -291,6 +293,23 @@ function App() {
             
         </div>
 
+        {/* Timelapses */}
+        <div className='Timelapses' id='Timelapses'>
+            <div><h1>Timelapse</h1></div>
+            <div className='TimelapsesContainer'>
+            <iframe
+                width="90%"
+                height="643"
+                src="https://www.youtube.com/embed/Te0vxdyxwRY?autoplay=1&mute=1"
+                title="Time Lapse - Cross The Pond Westbound 2024 (Ground/Radar)┃CASABLANCA [GMMN]"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+            ></iframe>
+            </div>
+        </div>
+
         {/* Staff */}
         <div className='Staff' id="Staff">
 
@@ -319,26 +338,27 @@ function App() {
             <div className='Displayed-Staff'>
             
             <DisplayedStaff
-            function="Director"
-            name="Réda F."
-            id="Reda"
-            onClick={() => {
-                setTimeout(()=>{
-                document.querySelector(".Selected-Staff-Container").classList.remove(StaffAnimationClass)
-                },StaffAnimationRemovalDuration)
+                function="Director"
+                name="Réda F."
+                id="Reda"
+                onClick={() => {
+                    setTimeout(()=>{
+                    document.querySelector(".Selected-Staff-Container").classList.remove(StaffAnimationClass)
+                    },StaffAnimationRemovalDuration)
 
-                document.querySelector(".Selected-Staff-Container-TXT h1").innerHTML = "Réda F."
-                document.querySelector(".Selected-Staff-Container-TXT h2").innerHTML = "ACCMA1"
-                document.querySelector(".Selected-Staff-Container-TXT p").innerHTML = "1171306"
-                document.querySelector(".Selected-Staff-Container-2-description h1").innerHTML = "Director : "
-                document.querySelector(".Selected-Staff-Container-2-description p").innerHTML = "Leader of the Maghreb vACC, responsible for overseeing the overall operation of the Virtual Area Control Center."
-                
-                        
-                document.querySelector(".Selected-Staff-Container").classList.add(StaffAnimationClass)
+                    document.querySelector(".Selected-Staff-Container-TXT h1").innerHTML = "Réda F."
+                    document.querySelector(".Selected-Staff-Container-TXT h2").innerHTML = "ACCMA1"
+                    document.querySelector(".Selected-Staff-Container-TXT p").innerHTML = "1171306"
+                    document.querySelector(".Selected-Staff-Container-2-description h1").innerHTML = "Director : "
+                    document.querySelector(".Selected-Staff-Container-2-description p").innerHTML = "Leader of the Maghreb vACC, responsible for overseeing the overall operation of the Virtual Area Control Center."
+                    
+                            
+                    document.querySelector(".Selected-Staff-Container").classList.add(StaffAnimationClass)
 
-                
-            }}
+                    
+                }}
             />
+            
             <DisplayedStaff
                 function="Head of Operations"
                 name="Bobbie C."
@@ -400,7 +420,6 @@ function App() {
                 
                 }}
             />
-            
             <DisplayedStaff
                 function="Deputy Director"
                 name="Hayder"
@@ -442,6 +461,26 @@ function App() {
                                 
                     document.querySelector(".Selected-Staff-Container").classList.add(StaffAnimationClass)
 
+                
+                }}
+            />
+            
+            <DisplayedStaff
+                function="Head of Operations"
+                name="Ali B."
+                id="Ali"
+                            
+                onClick={() => {
+                    document.querySelector(".Selected-Staff-Container-TXT h1").innerHTML = "Ali B."
+                    document.querySelector(".Selected-Staff-Container-TXT h2").innerHTML = "ACCMA2"
+                    document.querySelector(".Selected-Staff-Container-TXT p").innerHTML = "xxxxxxx"
+                    document.querySelector(".Selected-Staff-Container-2-description h1").innerHTML = "Deputy Director : "
+                    document.querySelector(".Selected-Staff-Container-2-description p").innerHTML = "Lorem ipsum Deputy Director free text test test Lorem ipsum Deputy Director free text test test."
+                    document.querySelector(".Selected-Staff-Container").classList.add(StaffAnimationClass)
+
+                    setTimeout(()=>{
+                        document.querySelector(".Selected-Staff-Container").classList.remove(StaffAnimationClass)
+                    },StaffAnimationRemovalDuration)
                 
                 }}
             />

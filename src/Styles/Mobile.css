@@ -1,6 +1,6 @@
 
 /* Media Queries */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     *{
         /* outline: 1px solid red; */
     }
@@ -58,7 +58,7 @@
     .Home{
         width: 100vw;
         height: 100vh;
-        background-image: url("../Ressources/Images/Background/1.png");
+        background-image: url("../Ressources/Images/Background/TowerBG.jpg");
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
@@ -199,7 +199,7 @@
     }
 
     .Staff{
-        height: 200vh;
+        height: 250vh;
     }
     .Selected-Staff {
         display: none;
@@ -224,10 +224,10 @@
         translate: 1.5vw!important;
     }
     .Displayed-Staff-Container-TXT h1{
-        font-size: 8vw!important;
+        font-size: 7vw!important;
     }
     .Displayed-Staff-Container-TXT p{
-        font-size: 5vw!important;
+        font-size: 4vw!important;
     }
     .Footer {
         width: 100vw;
