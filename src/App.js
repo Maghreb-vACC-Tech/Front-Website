@@ -22,7 +22,7 @@ import Question from './Components/FAQ';
 import DisplayedStaff from './Components/Displayed-Staff';
 
 
-import Data from './MaghrebSetup'
+// import Data from './MaghrebSetup'
 
 
 function App() {
@@ -34,13 +34,13 @@ function App() {
     // For HeaderBar
     const [Logo, SetLogo] = useState(BigLogo);
     let PreviousScrollValue = 0;
-
-
+    
+    const appEnv = process.env.REACT_APP_APP_ENV;
     
     useEffect(() => {
 
         // Events
-        if(Data.dev){
+        if(appEnv=="DEV"){
             fetch("http://localhost:1000/MaghrebEvents")
             .then(res => res.json())
             .then(data => {

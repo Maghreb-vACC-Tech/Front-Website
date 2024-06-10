@@ -1,11 +1,13 @@
 import { useState } from 'react';
 // import { useState , Redirect } from 'react';
 import { Navigate } from 'react-router-dom';
-import Data from '../../MaghrebSetup.json'
+// import Data from '../../MaghrebSetup.json'
 
 function LoginBtn() {
 
     const [authRedirect, setAuthRedirect] = useState('');
+    
+    const appEnv = process.env.REACT_APP_APP_ENV;
   
     const handleSubmit = (e) => {
       e.preventDefault();
@@ -14,7 +16,7 @@ function LoginBtn() {
   
     const prod = true
     setAuthRedirect('')
-    if ( Data.dev ) {
+    if ( appEnv=="DEV") {
       
       authorizeUrl = `https://auth-dev.vatsim.net/oauth/authorize?
         client_id=619&
