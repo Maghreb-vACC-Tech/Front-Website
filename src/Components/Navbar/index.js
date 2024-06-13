@@ -37,7 +37,7 @@ function Navbar(props){
                     <a href="#Staff">Our Team</a>
                 </div>
                 <div>
-                    <a href="#Contact">Useful Links</a>
+                    <a href="#Footer">Useful Links</a>
                 </div>
             </div>
 
