@@ -23,7 +23,7 @@ import React , { useState, useEffect } from "react"
 function App() {
     const [events, setEvents] = useState([]);
     const [ipAddress, setIpAddress] = useState('');
-    // const [Logo, SetLogo] = useState(BigLogo);
+    const [Logo, SetLogo] = useState(BigLogo);
     
     const appEnv = process.env.REACT_APP_APP_ENV;
 
